@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+    <script>
+    document.querySelectorAll('.nav-links a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const sectionId = this.getAttribute('href');
+            document.querySelector(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
 <body>
     <!-- Navegación -->
     <header>
