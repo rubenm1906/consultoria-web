@@ -1,66 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Consulting & Automation</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>MarinTech Consulting - Soluciones TI y Consultoría</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <!-- Header -->
-    <header class="bg-blue-600 text-white py-6">
-        <div class="container mx-auto text-center">
-            <h1 class="text-4xl font-bold">Digital Consulting & Automation</h1>
-            <p class="mt-2">Transforming your business with innovative and automated solutions</p>
-        </div>
+<body>
+    <!-- Navegación -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">MarinTech Consulting</div>
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#experience">Experiencia</a></li>
+                <li><a href="#why-us">Por qué Nosotros</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Services -->
-    <section id="services" class="my-16">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-semibold mb-6">Our Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold mb-4">Process Automation</h3>
-                    <p>We optimize your workflows, saving time and resources through automated solutions.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold mb-4">Technology Consulting</h3>
-                    <p>Helping your company adopt new technologies to enhance efficiency and competitiveness.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold mb-4">System Integration</h3>
-                    <p>Connecting your platforms and tools for a more seamless and efficient workflow.</p>
-                </div>
+    <!-- Sección Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Soluciones Tecnológicas para el Éxito Empresarial</h1>
+            <p>Con más de 16 años de experiencia, ofrecemos consultoría estratégica y desarrollo de software para transformar tus operaciones en TI, iGaming y Retail.</p>
+            <a href="#contact" class="cta-button">Solicita una Consulta</a>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="services" class="section">
+        <h2>Nuestros Servicios</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Gestión de Proyectos Digitales</h3>
+                <p>Lideramos proyectos complejos con metodologías Agile, garantizando entregas puntuales y alineadas con tus objetivos empresariales.</p>
+            </div>
+            <div class="service-card">
+                <h3>Desarrollo de Software Empresarial</h3>
+                <p>Diseñamos e implementamos soluciones personalizadas con tecnologías modernas como PHP, JavaScript, y APIs REST/SOAP.</p>
+            </div>
+            <div class="service-card">
+                <h3>Automatización con Inteligencia Artificial</h3>
+                <p>Optimizamos procesos mediante IA avanzada (Open AI, Grok, Perplexity), reduciendo costos y mejorando la eficiencia operativa.</p>
+            </div>
+            <div class="service-card">
+                <h3>Consultoría Estratégica en TI</h3>
+                <p>Brindamos expertise en TI, iGaming y Retail, ayudando a empresas a maximizar su rendimiento y cumplir regulaciones.</p>
             </div>
         </div>
     </section>
 
-    <!-- About Me -->
-    <section id="about" class="bg-gray-200 py-16">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-semibold mb-6">About Me</h2>
-            <p class="max-w-2xl mx-auto">I am a digital consultant specializing in process automation and system integration. My goal is to help businesses become more efficient by leveraging innovative technologies. With a personalized approach and measurable results, I have worked with various companies to transform their operations.</p>
+    <!-- Sección Experiencia -->
+    <section id="experience" class="section dark-bg">
+        <h2>Nuestra Experiencia</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Automatización de Procesos de Adquisición</h3>
+                <p><em>2022 - Actualidad</em></p>
+                <p>Desarrollamos una solución digital que automatizó el ciclo de vida de ofertas, reduciendo costos en un 40% y mejorando la precisión en un 20% para una empresa líder en Retail.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Integración de Plataformas de iGaming</h3>
+                <p><em>2021</em></p>
+                <p>Lideramos la implementación de un sitio web en el mercado español, integrando sistemas de pago y marketing para una compañía de iGaming.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Proyectos de Integración Global</h3>
+                <p><em>2018 - 2021</em></p>
+                <p>Entregamos más de 40 proyectos de integración en mercados regulados, optimizando plataformas de juego para operadores B2B.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-16">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-semibold mb-6">Contact</h2>
-            <p>Have a question? I'm here to help! Fill out the form below to get in touch.</p>
-            <form class="mt-6">
-                <input type="text" class="p-4 rounded-lg w-full mb-4" placeholder="Your Name" required>
-                <input type="email" class="p-4 rounded-lg w-full mb-4" placeholder="Your Email" required>
-                <textarea class="p-4 rounded-lg w-full mb-4" rows="4" placeholder="Your Message" required></textarea>
-                <button type="submit" class="bg-blue-600 text-white p-4 rounded-lg">Send Message</button>
-            </form>
+    <!-- Sección Por qué Nosotros -->
+    <section id="why-us" class="section">
+        <h2>Por qué Elegirnos</h2>
+        <div class="why-us-grid">
+            <div class="why-us-item">
+                <h3>16+ Años de Experiencia</h3>
+                <p>Un historial probado en la entrega de soluciones innovadoras en múltiples industrias.</p>
+            </div>
+            <div class="why-us-item">
+                <h3>Enfoque en Resultados</h3>
+                <p>Nos especializamos en generar valor tangible para tu negocio.</p>
+            </div>
+            <div class="why-us-item">
+                <h3>Equipo Multidisciplinario</h3>
+                <p>Expertos en TI, desarrollo, y consultoría trabajando juntos para tu éxito.</p>
+            </div>
         </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contact" class="section dark-bg">
+        <h2>Contáctanos</h2>
+        <p>Agenda una consulta estratégica con nuestro equipo:</p>
+        <!-- Calendly -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/tu-usuario/30min" style="min-width:320px;height:630px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-blue-600 text-white text-center py-6">
-        <p>&copy; 2025 Digital Consulting & Automation. All rights reserved.</p>
+    <footer>
+        <p>© 2025 MarinTech Consulting. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Chat Tawk.to -->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/tu-id-de-tawk/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
 </body>
 </html>
