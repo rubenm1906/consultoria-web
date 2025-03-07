@@ -126,7 +126,7 @@ body.dark-mode .hero {
     padding: 100px 60px;
     text-align: center;
     background-color: #fff;
-    min-height: 400px; /* Aseguramos altura mínima */
+    min-height: 400px;
 }
 
 body.dark-mode .section {
@@ -419,6 +419,27 @@ body.dark-mode .chatbot-toggle {
     opacity: 0.9;
 }
 
+/* Ubicación */
+#location {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#location p {
+    max-width: 800px;
+    margin: 20px auto;
+    color: #ddd !important;
+}
+
+#map {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+body.dark-mode #location p {
+    color: #ccc !important;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .navbar {
@@ -490,25 +511,4 @@ body.dark-mode .chatbot-toggle {
         width: 90%;
         right: 5%;
     }
-}
-
-/* Ubicación */
-#location {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-#location p {
-    max-width: 800px;
-    margin: 20px auto;
-    color: #ddd !important;
-}
-
-#map {
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-body.dark-mode #location p {
-    color: #ccc !important;
 }
