@@ -7,7 +7,7 @@
     <meta name="keywords" content="consultoría TI, desarrollo software, iGaming, automatización IA">
     <title>MarinTech Consulting - Soluciones TI y Consultoría</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" fallback="sans-serif">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -22,9 +22,10 @@
                 <li><a href="#experience">Experiencia</a></li>
                 <li><a href="#stats">Logros</a></li>
                 <li><a href="#why-us">Por qué Nosotros</a></li>
+                <li><a href="#testimonials">Testimonios</a></li>
+                <li><a href="#location">Ubicación</a></li>
                 <li><a href="#contact">Contacto</a></li>
                 <li><a href="#newsletter">Newsletter</a></li>
-                <li><a href="#location">Ubicación</a></li>
             </ul>
             <button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
         </nav>
@@ -148,21 +149,28 @@
         </div>
     </section>
 
-    <!-- Contacto -->
-    <section id="contact" class="section dark-bg" data-aos="fade-up">
-        <h2>Contáctanos</h2>
-        <p>Agenda una consulta estratégica:</p>
-        <div class="calendly-inline-widget" data-url="https://calendly.com/rubenmarin19/consultoria-estragetica" style="min-width:320px;height:630px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-    </section>
-
     <!-- Ubicación -->
     <section id="location" class="section dark-bg" data-aos="fade-up">
         <h2 class="section-title">Nuestra Ubicación</h2>
-        <p class="section-description">Encuéntranos en nuestras oficinas o explora las regiones donde operamos a nivel global.</p>
+        <p class="section-description">Encuéntranos en nuestras oficinas o explora las regiones donde operamos globalmente.</p>
         <div class="map-container">
             <div id="map"></div>
         </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="section" data-aos="fade-up">
+        <h2>Contáctanos</h2>
+        <p>Agenda una consulta estratégica con nuestro equipo:</p>
+        <div class="calendly-container">
+            <div class="calendly-inline-widget" data-url="https://calendly.com/rubenmarin19/consultoria-estrategica" style="min-width:320px;height:630px;"></div>
+        </div>
+        <div class="contact-options">
+            <p>¿Prefieres otra forma de contacto?</p>
+            <a href="mailto:contacto@marintechconsulting.com" class="contact-link">Envíanos un correo</a>
+            <a href="https://wa.me/+584123456789" target="_blank" class="contact-link">Contáctanos por WhatsApp</a>
+        </div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     </section>
 
     <!-- Newsletter -->
@@ -180,11 +188,11 @@
             <div class="article-grid">
                 <div class="article-item" data-aos="zoom-in">
                     <h4>Grok 3: El Nuevo Referente en Inteligencia Artificial</h4>
-                    <p>Elon Musk y xAI han lanzado Grok 3 en febrero de 2025, un modelo que promete revolucionar la IA con su capacidad de razonamiento avanzado y "pensamiento transparente". Según TechCrunch, Grok 3 supera a modelos como GPT-4o en benchmarks de matemáticas y ciencias, y ya está disponible para usuarios de X Premium+. Este chatbot, diseñado para buscar la "máxima verdad", incluye funciones como Deep Search Mode y Think Mode, ofreciendo una experiencia más interactiva y transparente.</p>
+                    <p>Elon Musk y xAI han lanzado Grok 3 en febrero de 2025, un modelo que promete revolucionar la IA con su capacidad de razonamiento avanzado y "pensamiento transparente".</p>
                 </div>
                 <div class="article-item" data-aos="zoom-in">
                     <h4>IA y Automatización: Transformando Industrias en 2025</h4>
-                    <p>La IA está llevando la automatización a nuevos niveles, optimizando procesos en sectores como la ciberseguridad y la atención médica. Según un reciente informe de Sangfor, plataformas como Copilot de Microsoft y Claude de Anthropic están automatizando tareas repetitivas, desde la programación hasta la gestión de datos, mejorando la productividad en un 30%. En ciberseguridad, la IA permite monitoreo constante y respuestas automáticas a amenazas, asegurando una protección más eficiente de redes empresariales.</p>
+                    <p>La IA está optimizando procesos en ciberseguridad y atención médica, mejorando la productividad en un 30% según informes recientes.</p>
                 </div>
             </div>
         </div>
@@ -221,7 +229,7 @@
             const navbar = document.querySelector('.navbar');
             const navLinks = document.querySelector('.nav-links');
             navbar.addEventListener('click', (e) => {
-                if (e.target.tagName !== 'A') navLinks.classList.toggle('active');
+                if (e.target.tagName !== 'A' && e.target.tagName !== 'BUTTON') navLinks.classList.toggle('active');
             });
 
             // Modo oscuro
@@ -232,6 +240,8 @@
                 icon.classList.toggle('fa-moon');
                 icon.classList.toggle('fa-sun');
                 localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+                // Actualizar mapa si está cargado
+                if (window.google && window.google.maps) initMap();
             });
             if (localStorage.getItem('theme') === 'dark') {
                 document.body.classList.add('dark-mode');
@@ -249,7 +259,6 @@
                 chatbotToggle.style.display = 'block';
                 chatbotToggle.addEventListener('click', () => {
                     chatbot.classList.toggle('active');
-                    console.log('Chatbot toggled');
                 });
             }
             if (closeChat) {
@@ -257,13 +266,12 @@
             }
             if (chatbotInput) {
                 chatbotInput.addEventListener('keypress', (e) => {
-                    if (e.key === 'Enter' && chatbotInput.value) {
+                    if (e.key === 'Enter' && chatbotInput.value.trim()) {
                         const userMessage = document.createElement('p');
-                        userMessage.textContent = `Tú: ${chatbotInput.value}`;
+                        userMessage.textContent = `Tú: ${chatbotInput.value.trim()}`;
                         chatbotBody.appendChild(userMessage);
-
                         const response = document.createElement('p');
-                        response.textContent = getBotResponse(chatbotInput.value);
+                        response.textContent = getBotResponse(chatbotInput.value.trim());
                         chatbotBody.appendChild(response);
                         chatbotInput.value = '';
                         chatbotBody.scrollTop = chatbotBody.scrollHeight;
@@ -272,7 +280,7 @@
             }
 
             function getBotResponse(input) {
-                input = input.toLowerCase();
+                input = input.toLowerCase().trim();
                 const responses = {
                     'hola': '¡Hola! Bienvenido a MarinTech Consulting. ¿En qué puedo ayudarte?',
                     'servicios': 'Ofrecemos gestión de proyectos digitales, desarrollo de software empresarial, automatización con IA y consultoría estratégica en TI. ¿Cuál te interesa más?',
@@ -317,7 +325,7 @@
             // Newsletter
             document.getElementById('newsletter-form').addEventListener('submit', (e) => {
                 e.preventDefault();
-                alert('¡Gracias por suscribirte!');
+                alert('¡Gracias por suscribirte! Te enviaremos las últimas novedades.');
                 e.target.reset();
             });
 
@@ -332,23 +340,9 @@
                 { lat: 51.5074, lng: -0.1278, title: "Londres, Reino Unido - Operaciones iGaming" },
             ];
 
-            // Estilo base para modo claro
-            const lightStyle = [
-                { elementType: "geometry", stylers: [{ color: "#f5f5f5" }] },
-                { elementType: "labels.text.fill", stylers: [{ color: "#333333" }] },
-                { elementType: "labels.text.stroke", stylers: [{ color: "#ffffff" }] },
-            ];
-
-            // Estilo para modo oscuro
-            const darkStyle = [
-                { elementType: "geometry", stylers: [{ color: "#1a3c5e" }] },
-                { elementType: "labels.text.fill", stylers: [{ color: "#ffffff" }] },
-                { elementType: "labels.text.stroke", stylers: [{ color: "#000000" }] },
-            ];
-
-            // Determinar el estilo según el modo
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            const mapStyle = isDarkMode ? darkStyle : lightStyle;
+            const mapStyle = document.body.classList.contains('dark-mode')
+                ? [{ elementType: "geometry", stylers: [{ color: "#0a2a4a" }] }, { elementType: "labels.text.fill", stylers: [{ color: "#ffffff" }] }]
+                : [{ elementType: "geometry", stylers: [{ color: "#f5f5f5" }] }, { elementType: "labels.text.fill", stylers: [{ color: "#333333" }] }];
 
             const map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 2,
@@ -369,41 +363,13 @@
                 });
 
                 const infoWindow = new google.maps.InfoWindow({
-                    content: `<h3 style="color: ${isDarkMode ? '#fff' : '#333'};">${location.title}</h3><p style="color: ${isDarkMode ? '#ddd' : '#555'};">Contáctanos para más información sobre nuestras operaciones aquí.</p>`,
+                    content: `<h3 style="color: ${document.body.classList.contains('dark-mode') ? '#fff' : '#333'};">${location.title}</h3><p style="color: ${document.body.classList.contains('dark-mode') ? '#ddd' : '#555'};">Contáctanos para más información.</p>`,
                 });
 
                 marker.addListener("click", () => {
                     infoWindow.open(map, marker);
                 });
             });
-
-            // Actualizar el mapa cuando cambie el tema
-            const themeToggle = document.getElementById('theme-toggle');
-            if (themeToggle) {
-                themeToggle.addEventListener('click', () => {
-                    const isNowDarkMode = document.body.classList.contains('dark-mode');
-                    map.setOptions({ styles: isNowDarkMode ? darkStyle : lightStyle });
-                    locations.forEach(location => {
-                        const marker = map.getMarker ? map.getMarker(location) : null;
-                        if (marker) {
-                            marker.setMap(null);
-                        }
-                        const newMarker = new google.maps.Marker({
-                            position: location,
-                            map: map,
-                            title: location.title,
-                            icon: {
-                                url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
-                                scaledSize: new google.maps.Size(32, 32),
-                            },
-                        });
-                        newMarker.addListener("click", () => {
-                            infoWindow.setContent(`<h3 style="color: ${isNowDarkMode ? '#fff' : '#333'};">${location.title}</h3><p style="color: ${isNowDarkMode ? '#ddd' : '#555'};">Contáctanos para más información.</p>`);
-                            infoWindow.open(map, newMarker);
-                        });
-                    });
-                });
-            }
         }
 
         // Cargar el API de Google Maps
