@@ -491,3 +491,24 @@ body.dark-mode .chatbot-toggle {
         right: 5%;
     }
 }
+
+/* Ubicación */
+#location {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#location p {
+    max-width: 800px;
+    margin: 20px auto;
+    color: #ddd !important;
+}
+
+#map {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+body.dark-mode #location p {
+    color: #ccc !important;
+}
