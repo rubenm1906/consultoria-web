@@ -351,9 +351,9 @@
             const mapStyle = isDarkMode ? darkStyle : lightStyle;
 
             const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 4,
+                zoom: 2,
                 center: locations[0],
-                mapTypeId: "satellite",
+                mapTypeId: "roadmap",
                 styles: mapStyle,
             });
 
