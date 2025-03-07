@@ -23,6 +23,7 @@
                 <li><a href="#stats">Logros</a></li>
                 <li><a href="#why-us">Por qué Nosotros</a></li>
                 <li><a href="#contact">Contacto</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
             </ul>
             <button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
         </nav>
@@ -154,15 +155,18 @@
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
     </section>
 
+    <!-- Newsletter -->
+    <section id="newsletter" class="section" data-aos="fade-up">
+        <h2>Suscríbete a Nuestro Newsletter</h2>
+        <p>Mantente al día con las últimas tendencias en TI, iGaming y Retail.</p>
+        <form id="newsletter-form" class="newsletter-form">
+            <input type="email" placeholder="Tu correo electrónico" required>
+            <button type="submit" class="cta-button">Suscribirse</button>
+        </form>
+    </section>
+
     <!-- Footer -->
     <footer>
-        <div class="newsletter">
-            <h3>Suscríbete a Nuestro Newsletter</h3>
-            <form id="newsletter-form">
-                <input type="email" placeholder="Tu correo electrónico" required>
-                <button type="submit">Suscribirse</button>
-            </form>
-        </div>
         <p>© 2025 MarinTech Consulting. Todos los derechos reservados.</p>
     </footer>
 
@@ -202,7 +206,12 @@
                 const icon = toggleButton.querySelector('i');
                 icon.classList.toggle('fa-moon');
                 icon.classList.toggle('fa-sun');
+                localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
             });
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+                toggleButton.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+            }
 
             // Chatbot
             const chatbotToggle = document.getElementById('chatbot-toggle');
@@ -220,7 +229,7 @@
                     chatbotBody.appendChild(userMessage);
 
                     const response = document.createElement('p');
-                    response.textContent = getBotResponse(chatbotInput.value.toLowerCase());
+                    response.textContent = getBotResponse(chatbotInput.value);
                     chatbotBody.appendChild(response);
                     chatbotInput.value = '';
                     chatbotBody.scrollTop = chatbotBody.scrollHeight;
@@ -228,9 +237,22 @@
             });
 
             function getBotResponse(input) {
-                if (input.includes('servicios')) return 'Ofrecemos gestión de proyectos, desarrollo de software, IA y consultoría en TI. ¿Cuál te interesa?';
-                if (input.includes('contacto')) return 'Agenda una consulta en "Contáctanos" o escribe aquí.';
-                return 'No entendí, ¿puedes ser más específico?';
+                input = input.toLowerCase();
+                const responses = {
+                    'hola': '¡Hola! Bienvenido a MarinTech Consulting. ¿En qué puedo ayudarte?',
+                    'servicios': 'Ofrecemos gestión de proyectos digitales, desarrollo de software empresarial, automatización con IA y consultoría estratégica en TI. ¿Cuál te interesa más?',
+                    'proyectos': 'Hemos automatizado procesos de adquisición (reduciendo costos un 40%), integrado plataformas de iGaming y completado más de 40 proyectos globales. ¿Quieres detalles de alguno?',
+                    'contacto': 'Puedes agendar una consulta en la sección "Contáctanos" o decirme qué necesitas y te ayudo.',
+                    'costo': 'Los costos dependen del proyecto. ¿Me das más detalles para darte una idea aproximada?',
+                    'tiempo': 'El tiempo varía según la complejidad, pero usamos metodologías Agile para ser rápidos y eficientes. ¿Qué tienes en mente?',
+                    'ia': 'Usamos IA avanzada como Open AI y Grok para automatizar procesos. ¿Te interesa un caso específico?',
+                    'gracias': '¡De nada! Estoy aquí para ayudar.',
+                    'default': 'No entendí bien. ¿Puedes darme más contexto o preguntar algo como "servicios" o "contacto"?'
+                };
+                for (const key in responses) {
+                    if (input.includes(key)) return responses[key];
+                }
+                return responses['default'];
             }
 
             // Estadísticas
