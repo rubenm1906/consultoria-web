@@ -24,6 +24,7 @@
                 <li><a href="#why-us">Por qué Nosotros</a></li>
                 <li><a href="#contact">Contacto</a></li>
                 <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="#location">Ubicación</a></li>
             </ul>
             <button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
         </nav>
@@ -154,14 +155,14 @@
         <div class="calendly-inline-widget" data-url="https://calendly.com/rubenmarin19/consultoria-estragetica" style="min-width:320px;height:630px;"></div>
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
     </section>
-    
+
+    <!-- Ubicación -->
     <section id="location" class="section dark-bg" data-aos="fade-up">
-    <h2>Nuestra Ubicación</h2>
-    <p>Encuéntranos en nuestras oficinas o descubre las regiones donde operamos.</p>
-    <div id="map" style="height: 400px; width: 100%; max-width: 1200px; margin: 0 auto;"></div>
+        <h2>Nuestra Ubicación</h2>
+        <p>Encuéntranos en nuestras oficinas o descubre las regiones donde operamos.</p>
+        <div id="map" style="height: 400px; width: 100%; max-width: 1200px; margin: 0 auto;"></div>
     </section>
 
-    
     <!-- Newsletter -->
     <section id="newsletter" class="section" data-aos="fade-up">
         <h2>Suscríbete a Nuestro Newsletter</h2>
@@ -228,7 +229,7 @@
             const chatbotBody = document.querySelector('.chatbot-body');
 
             if (chatbotToggle && chatbot) {
-                chatbotToggle.style.display = 'block'; // Forzamos visibilidad
+                chatbotToggle.style.display = 'block';
                 chatbotToggle.addEventListener('click', () => {
                     chatbot.classList.toggle('active');
                     console.log('Chatbot toggled');
@@ -272,33 +273,6 @@
                 return responses['default'];
             }
 
-            function initMap() {
-                const locations = [
-                    { lat: 40.4168, lng: -3.7038, title: "Madrid, España - Oficina Principal" },
-                    { lat: 51.5074, lng: -0.1278, title: "Londres, Reino Unido - Operaciones iGaming" },
-                ];
-
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 4, // Zoom inicial para mostrar ambas ubicaciones
-                center: locations[0], // Centrado en Madrid
-                mapTypeId: "roadmap", // Estilo de mapa (puedes cambiar a "satellite", "hybrid", etc.)
-            });
-
-            locations.forEach(location => {
-                new google.maps.Marker({
-                    position: location,
-                    map: map,
-                    title: location.title,
-        });
-    });
-}
-
-// Cargar el API de Google Maps
-const script = document.createElement("script");
-script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCA1NDk9w27uiB2phLIdnmvo9WDf6F-P7w&callback=initMap`;
-script.async = true;
-document.head.appendChild(script);
-            
             // Estadísticas
             const stats = document.querySelectorAll('.stat-number');
             stats.forEach(stat => {
@@ -333,6 +307,47 @@ document.head.appendChild(script);
             // AOS
             AOS.init({ duration: 1000, once: true });
         });
+
+        // Inicialización del mapa
+        function initMap() {
+            const locations = [
+                { lat: 40.4168, lng: -3.7038, title: "Madrid, España - Oficina Principal" },
+                { lat: 51.5074, lng: -0.1278, title: "Londres, Reino Unido - Operaciones iGaming" },
+            ];
+
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 4,
+                center: locations[0],
+                mapTypeId: "roadmap",
+                styles: [
+                    { elementType: "geometry", stylers: [{ color: "#1a3c5e" }] },
+                    { elementType: "labels.text.fill", stylers: [{ color: "#ffffff" }] },
+                    { elementType: "labels.text.stroke", stylers: [{ color: "#000000" }] },
+                ],
+            });
+
+            locations.forEach(location => {
+                const marker = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    title: location.title,
+                });
+
+                const infoWindow = new google.maps.InfoWindow({
+                    content: `<h3>${location.title}</h3><p>Contáctanos para más información sobre nuestras operaciones aquí.</p>`,
+                });
+
+                marker.addListener("click", () => {
+                    infoWindow.open(map, marker);
+                });
+            });
+        }
+
+        // Cargar el API de Google Maps
+        const script = document.createElement("script");
+        script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCA1NDk9w27uiB2phLIdnmvo9WDf6F-P7w&callback=initMap`;
+        script.async = true;
+        document.head.appendChild(script);
     </script>
 </body>
 </html>
