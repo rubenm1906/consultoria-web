@@ -168,20 +168,24 @@
     <!-- Newsletter -->
     <section id="newsletter" class="section" data-aos="fade-up">
         <h2>Suscríbete a Nuestro Newsletter</h2>
-        <p>Mantente al día con las últimas tendencias en TI, iGaming y Retail.</p>
-        <form id="newsletter-form" class="newsletter-form">
-            <input type="email" placeholder="Tu correo electrónico" required>
-            <button type="submit" class="cta-button">Suscribirse</button>
-        </form>
+        <p class="section-description">Mantente al día con las últimas tendencias en TI, iGaming y Retail.</p>
+        <div class="newsletter-form-container">
+            <form id="newsletter-form" class="newsletter-form">
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit" class="cta-button">Suscribirse</button>
+            </form>
+        </div>
         <div class="newsletter-articles">
-            <h3>Últimas Actualizaciones</h3>
-            <div class="article-item">
-                <h4>Grok 3: El Nuevo Referente en Inteligencia Artificial</h4>
-                <p>Elon Musk y xAI han lanzado Grok 3 en febrero de 2025, un modelo que promete revolucionar la IA con su capacidad de razonamiento avanzado y "pensamiento transparente". Según TechCrunch, Grok 3 supera a modelos como GPT-4o en benchmarks de matemáticas y ciencias, y ya está disponible para usuarios de X Premium+. Este chatbot, diseñado para buscar la "máxima verdad", incluye funciones como Deep Search Mode y Think Mode, ofreciendo una experiencia más interactiva y transparente.</p>
-            </div>
-            <div class="article-item">
-                <h4>IA y Automatización: Transformando Industrias en 2025</h4>
-                <p>La IA está llevando la automatización a nuevos niveles, optimizando procesos en sectores como la ciberseguridad y la atención médica. Según un reciente informe de Sangfor, plataformas como Copilot de Microsoft y Claude de Anthropic están automatizando tareas repetitivas, desde la programación hasta la gestión de datos, mejorando la productividad en un 30%. En ciberseguridad, la IA permite monitoreo constante y respuestas automáticas a amenazas, asegurando una protección más eficiente de redes empresariales.</p>
+            <h3 class="section-subtitle">Últimas Actualizaciones</h3>
+            <div class="article-grid">
+                <div class="article-item" data-aos="zoom-in">
+                    <h4>Grok 3: El Nuevo Referente en Inteligencia Artificial</h4>
+                    <p>Elon Musk y xAI han lanzado Grok 3 en febrero de 2025, un modelo que promete revolucionar la IA con su capacidad de razonamiento avanzado y "pensamiento transparente". Según TechCrunch, Grok 3 supera a modelos como GPT-4o en benchmarks de matemáticas y ciencias, y ya está disponible para usuarios de X Premium+. Este chatbot, diseñado para buscar la "máxima verdad", incluye funciones como Deep Search Mode y Think Mode, ofreciendo una experiencia más interactiva y transparente.</p>
+                </div>
+                <div class="article-item" data-aos="zoom-in">
+                    <h4>IA y Automatización: Transformando Industrias en 2025</h4>
+                    <p>La IA está llevando la automatización a nuevos niveles, optimizando procesos en sectores como la ciberseguridad y la atención médica. Según un reciente informe de Sangfor, plataformas como Copilot de Microsoft y Claude de Anthropic están automatizando tareas repetitivas, desde la programación hasta la gestión de datos, mejorando la productividad en un 30%. En ciberseguridad, la IA permite monitoreo constante y respuestas automáticas a amenazas, asegurando una protección más eficiente de redes empresariales.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -347,9 +351,9 @@
             const mapStyle = isDarkMode ? darkStyle : lightStyle;
 
             const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 4, // Zoom para mostrar Europa
+                zoom: 4,
                 center: locations[0],
-                mapTypeId: "satellite", // Modo satélite por defecto
+                mapTypeId: "satellite",
                 styles: mapStyle,
             });
 
@@ -359,8 +363,8 @@
                     map: map,
                     title: location.title,
                     icon: {
-                        url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png", // Icono personalizado (punto azul)
-                        scaledSize: new google.maps.Size(32, 32), // Tamaño del marcador
+                        url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+                        scaledSize: new google.maps.Size(32, 32),
                     },
                 });
 
@@ -382,7 +386,7 @@
                     locations.forEach(location => {
                         const marker = map.getMarker ? map.getMarker(location) : null;
                         if (marker) {
-                            marker.setMap(null); // Limpiar marcadores antiguos
+                            marker.setMap(null);
                         }
                         const newMarker = new google.maps.Marker({
                             position: location,
