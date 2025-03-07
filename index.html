@@ -220,24 +220,30 @@
             const chatbotInput = document.getElementById('chatbot-input');
             const chatbotBody = document.querySelector('.chatbot-body');
 
-            chatbotToggle.addEventListener('click', () => {
-                chatbot.classList.toggle('active');
-                console.log('Chatbot toggled'); // Depuración
-            });
-            closeChat.addEventListener('click', () => chatbot.classList.remove('active'));
-            chatbotInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter' && chatbotInput.value) {
-                    const userMessage = document.createElement('p');
-                    userMessage.textContent = `Tú: ${chatbotInput.value}`;
-                    chatbotBody.appendChild(userMessage);
+            if (chatbotToggle && chatbot) {
+                chatbotToggle.addEventListener('click', () => {
+                    chatbot.classList.toggle('active');
+                    console.log('Chatbot toggled'); // Depuración
+                });
+            }
+            if (closeChat) {
+                closeChat.addEventListener('click', () => chatbot.classList.remove('active'));
+            }
+            if (chatbotInput) {
+                chatbotInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter' && chatbotInput.value) {
+                        const userMessage = document.createElement('p');
+                        userMessage.textContent = `Tú: ${chatbotInput.value}`;
+                        chatbotBody.appendChild(userMessage);
 
-                    const response = document.createElement('p');
-                    response.textContent = getBotResponse(chatbotInput.value);
-                    chatbotBody.appendChild(response);
-                    chatbotInput.value = '';
-                    chatbotBody.scrollTop = chatbotBody.scrollHeight;
-                }
-            });
+                        const response = document.createElement('p');
+                        response.textContent = getBotResponse(chatbotInput.value);
+                        chatbotBody.appendChild(response);
+                        chatbotInput.value = '';
+                        chatbotBody.scrollTop = chatbotBody.scrollHeight;
+                    }
+                });
+            }
 
             function getBotResponse(input) {
                 input = input.toLowerCase();
