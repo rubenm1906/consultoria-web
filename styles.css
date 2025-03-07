@@ -8,6 +8,12 @@
 body {
     line-height: 1.6;
     color: #222;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
 /* Navbar */
@@ -22,6 +28,10 @@ body {
     width: 100%;
     top: 0;
     z-index: 1000;
+}
+
+body.dark-mode .navbar {
+    background-color: #1e1e1e;
 }
 
 .logo {
@@ -47,8 +57,24 @@ body {
     font-size: 16px;
 }
 
+body.dark-mode .nav-links a {
+    color: #e0e0e0;
+}
+
 .nav-links a:hover {
     color: #0078d4;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #1a3c5e;
+}
+
+body.dark-mode .theme-toggle {
+    color: #e0e0e0;
 }
 
 /* Hero */
@@ -60,6 +86,10 @@ body {
     justify-content: center;
     text-align: center;
     color: #fff;
+}
+
+body.dark-mode .hero {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 80, 150, 0.8)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
 }
 
 .hero-content h1 {
@@ -103,7 +133,11 @@ body {
     color: #1a3c5e;
 }
 
-.services-grid, .why-us-grid, .testimonials-grid {
+body.dark-mode .section h2 {
+    color: #e0e0e0;
+}
+
+.services-grid, .why-us-grid, .testimonials-grid, .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
@@ -117,6 +151,12 @@ body {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .service-card,
+body.dark-mode .why-us-item,
+body.dark-mode .testimonial-card {
+    background-color: #1e1e1e;
 }
 
 .service-card:hover, .why-us-item:hover, .testimonial-card:hover {
@@ -173,11 +213,35 @@ body {
     color: #ddd;
 }
 
+/* Estadísticas */
+.stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 50px;
+    font-weight: 700;
+    color: #0078d4;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    color: #ddd;
+}
+
 /* Testimonios */
 .testimonial-card p {
     font-style: italic;
     margin-bottom: 15px;
     color: #555;
+}
+
+body.dark-mode .testimonial-card p {
+    color: #bbb;
 }
 
 .testimonial-card h4 {
@@ -186,13 +250,13 @@ body {
     color: #1a3c5e;
 }
 
+body.dark-mode .testimonial-card h4 {
+    color: #e0e0e0;
+}
+
 /* Fondo oscuro */
 .dark-bg {
     background-color: #1a3c5e;
-    color: #fff;
-}
-
-.dark-bg h2 {
     color: #fff;
 }
 
@@ -203,6 +267,109 @@ footer {
     background-color: #1a3c5e;
     color: #fff;
     font-size: 14px;
+}
+
+.newsletter {
+    margin-bottom: 20px;
+}
+
+.newsletter h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+#newsletter-form {
+    display: flex;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#newsletter-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    flex: 1;
+}
+
+#newsletter-form button {
+    padding: 10px 20px;
+    background-color: #0078d4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#newsletter-form button:hover {
+    background-color: #005ea2;
+}
+
+/* Chatbot */
+.chatbot {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    display: none;
+}
+
+body.dark-mode .chatbot {
+    background-color: #1e1e1e;
+}
+
+.chatbot.active {
+    display: block;
+}
+
+.chatbot-header {
+    background-color: #1a3c5e;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.close-chat {
+    float: right;
+    cursor: pointer;
+}
+
+.chatbot-body {
+    padding: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#chatbot-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-radius: 0 0 10px 10px;
+}
+
+body.dark-mode #chatbot-input {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-top: 1px solid #444;
+}
+
+.chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0078d4;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 /* Responsive */
@@ -222,6 +389,10 @@ footer {
         box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 
+    body.dark-mode .nav-links {
+        background-color: #1e1e1e;
+    }
+
     .nav-links.active {
         display: flex;
     }
@@ -235,6 +406,10 @@ footer {
         content: "☰";
         font-size: 28px;
         color: #1a3c5e;
+    }
+
+    body.dark-mode .navbar::after {
+        color: #e0e0e0;
     }
 
     .hero {
@@ -254,8 +429,13 @@ footer {
         padding: 60px 20px;
     }
 
-    .services-grid, .why-us-grid, .testimonials-grid {
+    .services-grid, .why-us-grid, .testimonials-grid, .stats-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    .chatbot {
+        width: 90%;
+        right: 5%;
     }
 }
