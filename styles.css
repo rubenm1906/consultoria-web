@@ -132,17 +132,23 @@ body.dark-mode .section {
     background-color: #121212;
 }
 
-.section h2 {
-    font-size: 40px;
-    font-weight: 600;
-    margin-bottom: 50px;
-    color: #1a3c5e;
+/* Fondo oscuro - Prioridad sobre .section */
+.dark-bg {
+    background-color: #1a3c5e !important;
+    color: #fff;
 }
 
-body.dark-mode .section h2 {
+body:not(.dark-mode) .dark-bg {
+    background-color: #1a3c5e !important;
+    color: #fff;
+}
+
+body.dark-mode .dark-bg {
+    background-color: #0a2a4a !important;
     color: #e0e0e0;
 }
 
+/* Grids */
 .services-grid, .why-us-grid, .testimonials-grid, .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -211,20 +217,20 @@ body.dark-mode .testimonial-card {
 .timeline-item h3 {
     font-size: 22px;
     font-weight: 600;
-    color: #fff;
+    color: #fff !important;
 }
 
 .timeline-item p {
     margin: 8px 0;
-    color: #ddd;
+    color: #ddd !important;
 }
 
 body.dark-mode .timeline-item h3 {
-    color: #fff;
+    color: #fff !important;
 }
 
 body.dark-mode .timeline-item p {
-    color: #ccc;
+    color: #ccc !important;
 }
 
 /* Estadísticas */
@@ -244,15 +250,15 @@ body.dark-mode .timeline-item p {
 }
 
 .stat-item p {
-    color: #ddd;
+    color: #ddd !important;
 }
 
 body.dark-mode .stat-number {
-    color: #fff;
+    color: #fff !important;
 }
 
 body.dark-mode .stat-item p {
-    color: #ccc;
+    color: #ccc !important;
 }
 
 /* Testimonios */
@@ -274,16 +280,6 @@ body.dark-mode .testimonial-card p {
 
 body.dark-mode .testimonial-card h4 {
     color: #e0e0e0;
-}
-
-/* Fondo oscuro */
-.dark-bg {
-    background-color: #1a3c5e;
-    color: #fff;
-}
-
-body.dark-mode .dark-bg {
-    background-color: #0a2a4a;
 }
 
 /* Newsletter */
@@ -343,7 +339,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     display: none;
-    z-index: 2000;
+    z-index: 2000 !important;
 }
 
 body.dark-mode .chatbot {
@@ -351,7 +347,7 @@ body.dark-mode .chatbot {
 }
 
 .chatbot.active {
-    display: block;
+    display: block !important;
 }
 
 .chatbot-header {
@@ -398,7 +394,12 @@ body.dark-mode #chatbot-input {
     height: 50px;
     font-size: 24px;
     cursor: pointer;
-    z-index: 2500;
+    z-index: 2500 !important;
+    opacity: 1 !important;
+}
+
+body.dark-mode .chatbot-toggle {
+    background-color: #005ea2;
 }
 
 /* Responsive */
