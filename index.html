@@ -154,7 +154,14 @@
         <div class="calendly-inline-widget" data-url="https://calendly.com/rubenmarin19/consultoria-estragetica" style="min-width:320px;height:630px;"></div>
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
     </section>
+    
+    <section id="location" class="section dark-bg" data-aos="fade-up">
+    <h2>Nuestra Ubicación</h2>
+    <p>Encuéntranos en nuestras oficinas o descubre las regiones donde operamos.</p>
+    <div id="map" style="height: 400px; width: 100%; max-width: 1200px; margin: 0 auto;"></div>
+    </section>
 
+    
     <!-- Newsletter -->
     <section id="newsletter" class="section" data-aos="fade-up">
         <h2>Suscríbete a Nuestro Newsletter</h2>
@@ -265,6 +272,33 @@
                 return responses['default'];
             }
 
+            function initMap() {
+                const locations = [
+                    { lat: 40.4168, lng: -3.7038, title: "Madrid, España - Oficina Principal" },
+                    { lat: 51.5074, lng: -0.1278, title: "Londres, Reino Unido - Operaciones iGaming" },
+                ];
+
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 4, // Zoom inicial para mostrar ambas ubicaciones
+                center: locations[0], // Centrado en Madrid
+                mapTypeId: "roadmap", // Estilo de mapa (puedes cambiar a "satellite", "hybrid", etc.)
+            });
+
+            locations.forEach(location => {
+                new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    title: location.title,
+        });
+    });
+}
+
+// Cargar el API de Google Maps
+const script = document.createElement("script");
+script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCA1NDk9w27uiB2phLIdnmvo9WDf6F-P7w&callback=initMap`;
+script.async = true;
+document.head.appendChild(script);
+            
             // Estadísticas
             const stats = document.querySelectorAll('.stat-number');
             stats.forEach(stat => {
