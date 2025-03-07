@@ -158,9 +158,11 @@
 
     <!-- Ubicación -->
     <section id="location" class="section dark-bg" data-aos="fade-up">
-        <h2>Nuestra Ubicación</h2>
-        <p>Encuéntranos en nuestras oficinas o descubre las regiones donde operamos.</p>
-        <div id="map" style="height: 400px; width: 100%; max-width: 1200px; margin: 0 auto;"></div>
+        <h2 class="section-title">Nuestra Ubicación</h2>
+        <p class="section-description">Encuéntranos en nuestras oficinas o explora las regiones donde operamos a nivel global.</p>
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
     </section>
 
     <!-- Newsletter -->
@@ -315,15 +317,29 @@
                 { lat: 51.5074, lng: -0.1278, title: "Londres, Reino Unido - Operaciones iGaming" },
             ];
 
+            // Estilo base para modo claro
+            const lightStyle = [
+                { elementType: "geometry", stylers: [{ color: "#f5f5f5" }] },
+                { elementType: "labels.text.fill", stylers: [{ color: "#333333" }] },
+                { elementType: "labels.text.stroke", stylers: [{ color: "#ffffff" }] },
+            ];
+
+            // Estilo para modo oscuro
+            const darkStyle = [
+                { elementType: "geometry", stylers: [{ color: "#1a3c5e" }] },
+                { elementType: "labels.text.fill", stylers: [{ color: "#ffffff" }] },
+                { elementType: "labels.text.stroke", stylers: [{ color: "#000000" }] },
+            ];
+
+            // Determinar el estilo según el modo
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            const mapStyle = isDarkMode ? darkStyle : lightStyle;
+
             const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 4,
+                zoom: 4, // Zoom para mostrar Europa
                 center: locations[0],
                 mapTypeId: "roadmap",
-                styles: [
-                    { elementType: "geometry", stylers: [{ color: "#1a3c5e" }] },
-                    { elementType: "labels.text.fill", stylers: [{ color: "#ffffff" }] },
-                    { elementType: "labels.text.stroke", stylers: [{ color: "#000000" }] },
-                ],
+                styles: mapStyle,
             });
 
             locations.forEach(location => {
@@ -331,16 +347,48 @@
                     position: location,
                     map: map,
                     title: location.title,
+                    icon: {
+                        url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png", // Icono personalizado (punto azul)
+                        scaledSize: new google.maps.Size(32, 32), // Tamaño del marcador
+                    },
                 });
 
                 const infoWindow = new google.maps.InfoWindow({
-                    content: `<h3>${location.title}</h3><p>Contáctanos para más información sobre nuestras operaciones aquí.</p>`,
+                    content: `<h3 style="color: ${isDarkMode ? '#fff' : '#333'};">${location.title}</h3><p style="color: ${isDarkMode ? '#ddd' : '#555'};">Contáctanos para más información sobre nuestras operaciones aquí.</p>`,
                 });
 
                 marker.addListener("click", () => {
                     infoWindow.open(map, marker);
                 });
             });
+
+            // Actualizar el mapa cuando cambie el tema
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    const isNowDarkMode = document.body.classList.contains('dark-mode');
+                    map.setOptions({ styles: isNowDarkMode ? darkStyle : lightStyle });
+                    locations.forEach(location => {
+                        const marker = map.getMarker ? map.getMarker(location) : null;
+                        if (marker) {
+                            marker.setMap(null); // Limpiar marcadores antiguos
+                        }
+                        const newMarker = new google.maps.Marker({
+                            position: location,
+                            map: map,
+                            title: location.title,
+                            icon: {
+                                url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+                                scaledSize: new google.maps.Size(32, 32),
+                            },
+                        });
+                        newMarker.addListener("click", () => {
+                            infoWindow.setContent(`<h3 style="color: ${isNowDarkMode ? '#fff' : '#333'};">${location.title}</h3><p style="color: ${isNowDarkMode ? '#ddd' : '#555'};">Contáctanos para más información.</p>`);
+                            infoWindow.open(map, newMarker);
+                        });
+                    });
+                });
+            }
         }
 
         // Cargar el API de Google Maps
