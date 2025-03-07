@@ -126,28 +126,28 @@ body.dark-mode .hero {
     padding: 100px 60px;
     text-align: center;
     background-color: #fff;
-    min-height: 300px; /* Aseguramos altura mínima */
+    min-height: 400px; /* Aumentamos altura mínima */
 }
 
 body.dark-mode .section {
     background-color: #121212;
 }
 
-/* Fondo oscuro - Prioridad sobre .section */
+/* Fondo oscuro - Mayor especificidad */
 .dark-bg {
     background-color: #1a3c5e !important;
-    color: #fff;
-    padding: 50px 60px; /* Ajuste de padding */
+    color: #fff !important;
+    padding: 60px 80px !important;
 }
 
 body:not(.dark-mode) .dark-bg {
     background-color: #1a3c5e !important;
-    color: #fff;
+    color: #fff !important;
 }
 
 body.dark-mode .dark-bg {
     background-color: #0a2a4a !important;
-    color: #e0e0e0;
+    color: #e0e0e0 !important;
 }
 
 /* Grids */
@@ -246,6 +246,7 @@ body.dark-mode .timeline-item p {
     margin: 0 auto;
     position: relative;
     z-index: 10;
+    min-height: 200px;
 }
 
 .stat-item {
@@ -256,7 +257,7 @@ body.dark-mode .timeline-item p {
 .stat-number {
     font-size: 50px;
     font-weight: 700;
-    color: #0078d4;
+    color: #0078d4 !important;
     margin-bottom: 10px;
 }
 
@@ -350,7 +351,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     display: none;
-    z-index: 3000 !important;
+    z-index: 5000 !important;
 }
 
 body.dark-mode .chatbot {
@@ -405,19 +406,24 @@ body.dark-mode #chatbot-input {
     height: 50px;
     font-size: 24px;
     cursor: pointer;
-    z-index: 3500 !important;
+    z-index: 5500 !important;
     opacity: 1 !important;
+    transition: opacity 0.3s ease;
 }
 
 body.dark-mode .chatbot-toggle {
     background-color: #005ea2;
 }
 
-/* Ajuste para evitar superposición con Tawk.to */
+.chatbot-toggle:hover {
+    opacity: 0.9;
+}
+
+/* Forzar chatbot sobre Tawk.to */
 #twilio-chat-wrapper,
 #tawkchat-minified-box,
 #tawkchat-iframe-container {
-    z-index: 1000 !important;
+    z-index: 500 !important;
 }
 
 /* Responsive */
