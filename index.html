@@ -295,6 +295,12 @@
                 e.target.reset();
             });
 
+            // Forzar visibilidad del chatbot sobre Tawk.to
+            const tawkElements = document.querySelectorAll('#twilio-chat-wrapper, #tawkchat-minified-box, #tawkchat-iframe-container');
+            tawkElements.forEach(el => {
+                el.style.zIndex = '1000';
+            });
+
             // AOS
             AOS.init({ duration: 1000, once: true });
         });
