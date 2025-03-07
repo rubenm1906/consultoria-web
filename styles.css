@@ -126,6 +126,7 @@ body.dark-mode .hero {
     padding: 100px 60px;
     text-align: center;
     background-color: #fff;
+    min-height: 300px; /* Aseguramos altura mínima */
 }
 
 body.dark-mode .section {
@@ -136,6 +137,7 @@ body.dark-mode .section {
 .dark-bg {
     background-color: #1a3c5e !important;
     color: #fff;
+    padding: 50px 60px; /* Ajuste de padding */
 }
 
 body:not(.dark-mode) .dark-bg {
@@ -194,6 +196,8 @@ body.dark-mode .testimonial-card {
     max-width: 900px;
     margin: 0 auto;
     text-align: left;
+    position: relative;
+    z-index: 10;
 }
 
 .timeline-item {
@@ -201,6 +205,7 @@ body.dark-mode .testimonial-card {
     padding-left: 30px;
     border-left: 3px solid #0078d4;
     position: relative;
+    color: #fff !important;
 }
 
 .timeline-item::before {
@@ -236,10 +241,16 @@ body.dark-mode .timeline-item p {
 /* Estadísticas */
 .stats-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
 }
 
 .stat-item {
     text-align: center;
+    color: #fff !important;
 }
 
 .stat-number {
@@ -339,7 +350,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     display: none;
-    z-index: 2000 !important;
+    z-index: 3000 !important;
 }
 
 body.dark-mode .chatbot {
@@ -394,12 +405,19 @@ body.dark-mode #chatbot-input {
     height: 50px;
     font-size: 24px;
     cursor: pointer;
-    z-index: 2500 !important;
+    z-index: 3500 !important;
     opacity: 1 !important;
 }
 
 body.dark-mode .chatbot-toggle {
     background-color: #005ea2;
+}
+
+/* Ajuste para evitar superposición con Tawk.to */
+#twilio-chat-wrapper,
+#tawkchat-minified-box,
+#tawkchat-iframe-container {
+    z-index: 1000 !important;
 }
 
 /* Responsive */
