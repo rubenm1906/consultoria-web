@@ -126,7 +126,7 @@ body.dark-mode .hero {
     padding: 100px 60px;
     text-align: center;
     background-color: #fff;
-    min-height: 400px; /* Aumentamos altura mínima */
+    min-height: 400px; /* Aseguramos altura mínima */
 }
 
 body.dark-mode .section {
@@ -351,7 +351,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     display: none;
-    z-index: 5000 !important;
+    z-index: 1000 !important;
 }
 
 body.dark-mode .chatbot {
@@ -406,7 +406,7 @@ body.dark-mode #chatbot-input {
     height: 50px;
     font-size: 24px;
     cursor: pointer;
-    z-index: 5500 !important;
+    z-index: 1500 !important;
     opacity: 1 !important;
     transition: opacity 0.3s ease;
 }
@@ -417,13 +417,6 @@ body.dark-mode .chatbot-toggle {
 
 .chatbot-toggle:hover {
     opacity: 0.9;
-}
-
-/* Forzar chatbot sobre Tawk.to */
-#twilio-chat-wrapper,
-#tawkchat-minified-box,
-#tawkchat-iframe-container {
-    z-index: 500 !important;
 }
 
 /* Responsive */
