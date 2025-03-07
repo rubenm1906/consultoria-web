@@ -304,11 +304,14 @@ body.dark-mode #newsletter {
     background-color: #1e1e1e;
 }
 
+.newsletter-form-container {
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
 .newsletter-form {
     display: flex;
     gap: 20px;
-    max-width: 600px;
-    margin: 0 auto;
     justify-content: center;
     align-items: center;
 }
@@ -334,39 +337,53 @@ body.dark-mode .newsletter-form input {
 
 /* Artículos en Newsletter */
 .newsletter-articles {
-    max-width: 800px;
-    margin: 40px auto 0;
-    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.newsletter-articles h3 {
-    font-size: 24px;
+.section-subtitle {
+    font-size: 28px;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: #1a3c5e;
 }
 
-body.dark-mode .newsletter-articles h3 {
+body.dark-mode .section-subtitle {
     color: #e0e0e0;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .article-item {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
 }
 
 body.dark-mode .article-item {
     background-color: #2e2e2e;
 }
 
+.article-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
 .article-item h4 {
     font-size: 20px;
     font-weight: 600;
     color: #0078d4;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 body.dark-mode .article-item h4 {
@@ -376,6 +393,7 @@ body.dark-mode .article-item h4 {
 .article-item p {
     font-size: 16px;
     color: #555;
+    line-height: 1.6;
 }
 
 body.dark-mode .article-item p {
@@ -569,7 +587,7 @@ body.dark-mode .section-description {
         padding: 60px 20px;
     }
 
-    .services-grid, .why-us-grid, .testimonials-grid, .stats-grid {
+    .services-grid, .why-us-grid, .testimonials-grid, .stats-grid, .article-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
