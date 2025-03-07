@@ -219,6 +219,14 @@ body.dark-mode .testimonial-card {
     color: #ddd;
 }
 
+body.dark-mode .timeline-item h3 {
+    color: #fff;
+}
+
+body.dark-mode .timeline-item p {
+    color: #ccc;
+}
+
 /* Estadísticas */
 .stats-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -237,6 +245,14 @@ body.dark-mode .testimonial-card {
 
 .stat-item p {
     color: #ddd;
+}
+
+body.dark-mode .stat-number {
+    color: #fff;
+}
+
+body.dark-mode .stat-item p {
+    color: #ccc;
 }
 
 /* Testimonios */
@@ -327,6 +343,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     display: none;
+    z-index: 2000;
 }
 
 body.dark-mode .chatbot {
@@ -381,6 +398,7 @@ body.dark-mode #chatbot-input {
     height: 50px;
     font-size: 24px;
     cursor: pointer;
+    z-index: 2500;
 }
 
 /* Responsive */
