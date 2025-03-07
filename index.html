@@ -221,9 +221,10 @@
             const chatbotBody = document.querySelector('.chatbot-body');
 
             if (chatbotToggle && chatbot) {
+                chatbotToggle.style.display = 'block'; // Forzamos visibilidad
                 chatbotToggle.addEventListener('click', () => {
                     chatbot.classList.toggle('active');
-                    console.log('Chatbot toggled'); // Depuración
+                    console.log('Chatbot toggled');
                 });
             }
             if (closeChat) {
@@ -295,10 +296,16 @@
                 e.target.reset();
             });
 
+            // Desactivar Tawk.to temporalmente para prueba
+            if (window.Tawk_API) {
+                window.Tawk_API.hideWidget();
+                console.log('Tawk.to desactivado temporalmente');
+            }
+
             // Forzar visibilidad del chatbot sobre Tawk.to
             const tawkElements = document.querySelectorAll('#twilio-chat-wrapper, #tawkchat-minified-box, #tawkchat-iframe-container');
             tawkElements.forEach(el => {
-                el.style.zIndex = '1000';
+                el.style.zIndex = '500';
             });
 
             // AOS
