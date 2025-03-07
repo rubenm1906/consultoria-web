@@ -173,6 +173,17 @@
             <input type="email" placeholder="Tu correo electrónico" required>
             <button type="submit" class="cta-button">Suscribirse</button>
         </form>
+        <div class="newsletter-articles">
+            <h3>Últimas Actualizaciones</h3>
+            <div class="article-item">
+                <h4>Grok 3: El Nuevo Referente en Inteligencia Artificial</h4>
+                <p>Elon Musk y xAI han lanzado Grok 3 en febrero de 2025, un modelo que promete revolucionar la IA con su capacidad de razonamiento avanzado y "pensamiento transparente". Según TechCrunch, Grok 3 supera a modelos como GPT-4o en benchmarks de matemáticas y ciencias, y ya está disponible para usuarios de X Premium+. Este chatbot, diseñado para buscar la "máxima verdad", incluye funciones como Deep Search Mode y Think Mode, ofreciendo una experiencia más interactiva y transparente.</p>
+            </div>
+            <div class="article-item">
+                <h4>IA y Automatización: Transformando Industrias en 2025</h4>
+                <p>La IA está llevando la automatización a nuevos niveles, optimizando procesos en sectores como la ciberseguridad y la atención médica. Según un reciente informe de Sangfor, plataformas como Copilot de Microsoft y Claude de Anthropic están automatizando tareas repetitivas, desde la programación hasta la gestión de datos, mejorando la productividad en un 30%. En ciberseguridad, la IA permite monitoreo constante y respuestas automáticas a amenazas, asegurando una protección más eficiente de redes empresariales.</p>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -315,8 +326,6 @@
             const locations = [
                 { lat: 40.4168, lng: -3.7038, title: "Madrid, España - Oficina Principal" },
                 { lat: 51.5074, lng: -0.1278, title: "Londres, Reino Unido - Operaciones iGaming" },
-                { lat: 48.8566, lng: 2.3522, title: "Francia, Paris - IT Automation" },
-                
             ];
 
             // Estilo base para modo claro
@@ -338,9 +347,9 @@
             const mapStyle = isDarkMode ? darkStyle : lightStyle;
 
             const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 3, // Zoom para mostrar Europa
+                zoom: 4, // Zoom para mostrar Europa
                 center: locations[0],
-                mapTypeId: "roadmap",
+                mapTypeId: "satellite", // Modo satélite por defecto
                 styles: mapStyle,
             });
 
