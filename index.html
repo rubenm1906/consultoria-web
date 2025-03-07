@@ -220,7 +220,10 @@
             const chatbotInput = document.getElementById('chatbot-input');
             const chatbotBody = document.querySelector('.chatbot-body');
 
-            chatbotToggle.addEventListener('click', () => chatbot.classList.toggle('active'));
+            chatbotToggle.addEventListener('click', () => {
+                chatbot.classList.toggle('active');
+                console.log('Chatbot toggled'); // Depuración
+            });
             closeChat.addEventListener('click', () => chatbot.classList.remove('active'));
             chatbotInput.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter' && chatbotInput.value) {
