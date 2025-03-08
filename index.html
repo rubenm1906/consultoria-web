@@ -154,7 +154,10 @@
         <h2 class="section-title">Nuestra Ubicación</h2>
         <p class="section-description">Encuéntranos en nuestras oficinas o explora las regiones donde operamos globalmente.</p>
         <div class="map-container">
-            <div id="map"></div>
+            <div id="map" style="height: 400px; width: 100%;"></div>
+            <div id="map-error" style="display: none; color: #fff; text-align: center; padding: 20px;">
+                No se pudo cargar el mapa. Por favor, verifica tu conexión o intenta de nuevo más tarde.
+            </div>
         </div>
     </section>
 
@@ -163,14 +166,16 @@
         <h2>Contáctanos</h2>
         <p>Agenda una consulta estratégica con nuestro equipo:</p>
         <div class="calendly-container">
-            <div class="calendly-inline-widget" data-url="https://calendly.com/rubenmarin19/consultoria-estrategica" style="min-width:320px;height:630px;"></div>
+            <div id="calendly-widget" class="calendly-inline-widget" data-url="https://calendly.com/rubenmarin19/consultoria-estrategica" style="min-width:320px;height:630px;"></div>
+            <div id="calendly-error" style="display: none; color: #555; text-align: center; padding: 20px;">
+                No se pudo cargar el calendario. Por favor, usa las opciones alternativas de contacto.
+            </div>
         </div>
         <div class="contact-options">
             <p>¿Prefieres otra forma de contacto?</p>
-            <a href="/cdn-cgi/l/email-protection#e3808c8d978280978ca38e82918a8d9786808b808c8d90968f978a8d84cd808c8e" class="contact-link">Envíanos un correo</a>
+            <a href="mailto:contacto@marintech.com" class="contact-link">Envíanos un correo</a>
             <a href="https://wa.me/+584123456789" target="_blank" class="contact-link">Contáctanos por WhatsApp</a>
         </div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     </section>
 
     <!-- Newsletter -->
@@ -341,7 +346,10 @@
 
         // Inicialización del mapa con manejo de errores
         function initMap() {
-            if (!document.getElementById('map')) {
+            const mapElement = document.getElementById('map');
+            const mapErrorElement = document.getElementById('map-error');
+
+            if (!mapElement) {
                 console.error('Elemento #map no encontrado');
                 return;
             }
@@ -357,8 +365,8 @@
                 : [{ elementType: "geometry", stylers: [{ color: "#f5f5f5" }] }, { elementType: "labels.text.fill", stylers: [{ color: "#333333" }] }];
 
             try {
-                const map = new google.maps.Map(document.getElementById("map"), {
-                    zoom: 2,
+                const map = new google.maps.Map(mapElement, {
+                    zoom: 3,
                     center: locations[0],
                     mapTypeId: "roadmap",
                     styles: mapStyle,
@@ -370,7 +378,7 @@
                         map: map,
                         title: location.title,
                         icon: {
-                            url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+                            url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png", // Updated to HTTPS
                             scaledSize: new google.maps.Size(32, 32),
                         },
                     });
@@ -383,19 +391,56 @@
                         infoWindow.open(map, marker);
                     });
                 });
+
+                mapElement.style.display = 'block';
+                if (mapErrorElement) mapErrorElement.style.display = 'none';
                 console.log('Mapa inicializado correctamente');
             } catch (error) {
                 console.error('Error al inicializar el mapa:', error);
+                if (mapElement) mapElement.style.display = 'none';
+                if (mapErrorElement) mapErrorElement.style.display = 'block';
             }
         }
 
         // Cargar el API de Google Maps
-        const script = document.createElement("script");
-        script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCA1NDk9w27uiB2phLIdnmvo9WDf6F-P7w&callback=initMap`;
-        script.async = true;
-        script.onerror = () => console.error('Fallo al cargar la API de Google Maps');
-        document.head.appendChild(script);
+        const mapScript = document.createElement("script");
+        mapScript.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCA1NDk9w27uiB2phLIdnmvo9WDf6F-P7w&callback=initMap`;
+        mapScript.async = true;
+        mapScript.defer = true;
+        mapScript.onerror = () => {
+            console.error('Fallo al cargar la API de Google Maps');
+            const mapElement = document.getElementById('map');
+            const mapErrorElement = document.getElementById('map-error');
+            if (mapElement) mapElement.style.display = 'none';
+            if (mapErrorElement) mapErrorElement.style.display = 'block';
+        };
+        document.head.appendChild(mapScript);
+
+        // Verificar carga de Calendly
+        document.addEventListener('DOMContentLoaded', () => {
+            const calendlyWidget = document.getElementById('calendly-widget');
+            const calendlyError = document.getElementById('calendly-error');
+            const calendlyScript = document.createElement('script');
+            calendlyScript.src = "https://assets.calendly.com/assets/external/widget.js";
+            calendlyScript.async = true;
+            calendlyScript.onload = () => {
+                // Verificar si el widget de Calendly cargó correctamente
+                setTimeout(() => {
+                    const iframe = calendlyWidget.querySelector('iframe');
+                    if (!iframe || iframe.src.includes('404')) {
+                        console.error('El enlace de Calendly no es válido o no se encontró');
+                        if (calendlyWidget) calendlyWidget.style.display = 'none';
+                        if (calendlyError) calendlyError.style.display = 'block';
+                    }
+                }, 2000); // Esperar 2 segundos para que el widget intente cargar
+            };
+            calendlyScript.onerror = () => {
+                console.error('Fallo al cargar el script de Calendly');
+                if (calendlyWidget) calendlyWidget.style.display = 'none';
+                if (calendlyError) calendlyError.style.display = 'block';
+            };
+            document.head.appendChild(calendlyScript);
+        });
     </script>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
