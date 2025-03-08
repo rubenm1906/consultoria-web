@@ -457,7 +457,7 @@ body.dark-mode .chatbot-header {
 .close-chat {
     float: right;
     cursor: pointer;
-    color: var(--text-light);
+    color: var(--text-color);
     transition: color var(--transition-speed) ease;
 }
 
