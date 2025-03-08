@@ -7,7 +7,7 @@
     <meta name="keywords" content="consultoría TI, desarrollo software, iGaming, automatización IA">
     <title>MarinTech Consulting - Soluciones TI y Consultoría</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" fallback="sans-serif">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -167,7 +167,7 @@
         </div>
         <div class="contact-options">
             <p>¿Prefieres otra forma de contacto?</p>
-            <a href="mailto:contacto@marintechconsulting.com" class="contact-link">Envíanos un correo</a>
+            <a href="/cdn-cgi/l/email-protection#e3808c8d978280978ca38e82918a8d9786808b808c8d90968f978a8d84cd808c8e" class="contact-link">Envíanos un correo</a>
             <a href="https://wa.me/+584123456789" target="_blank" class="contact-link">Contáctanos por WhatsApp</a>
         </div>
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
@@ -240,8 +240,14 @@
                 icon.classList.toggle('fa-moon');
                 icon.classList.toggle('fa-sun');
                 localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-                // Actualizar mapa si está cargado
-                if (window.google && window.google.maps) initMap();
+                // Reiniciar mapa al cambiar tema
+                if (window.google && window.google.maps) {
+                    const mapContainer = document.getElementById('map');
+                    if (mapContainer) {
+                        mapContainer.innerHTML = ''; // Limpiar mapa existente
+                        initMap(); // Reiniciar mapa
+                    }
+                }
             });
             if (localStorage.getItem('theme') === 'dark') {
                 document.body.classList.add('dark-mode');
@@ -333,50 +339,63 @@
             AOS.init({ duration: 1000, once: true });
         });
 
-        // Inicialización del mapa
+        // Inicialización del mapa con manejo de errores
         function initMap() {
+            if (!document.getElementById('map')) {
+                console.error('Elemento #map no encontrado');
+                return;
+            }
+
             const locations = [
                 { lat: 40.4168, lng: -3.7038, title: "Madrid, España - Oficina Principal" },
                 { lat: 51.5074, lng: -0.1278, title: "Londres, Reino Unido - Operaciones iGaming" },
             ];
 
-            const mapStyle = document.body.classList.contains('dark-mode')
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            const mapStyle = isDarkMode
                 ? [{ elementType: "geometry", stylers: [{ color: "#0a2a4a" }] }, { elementType: "labels.text.fill", stylers: [{ color: "#ffffff" }] }]
                 : [{ elementType: "geometry", stylers: [{ color: "#f5f5f5" }] }, { elementType: "labels.text.fill", stylers: [{ color: "#333333" }] }];
 
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 2,
-                center: locations[0],
-                mapTypeId: "roadmap",
-                styles: mapStyle,
-            });
-
-            locations.forEach(location => {
-                const marker = new google.maps.Marker({
-                    position: location,
-                    map: map,
-                    title: location.title,
-                    icon: {
-                        url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
-                        scaledSize: new google.maps.Size(32, 32),
-                    },
+            try {
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 2,
+                    center: locations[0],
+                    mapTypeId: "roadmap",
+                    styles: mapStyle,
                 });
 
-                const infoWindow = new google.maps.InfoWindow({
-                    content: `<h3 style="color: ${document.body.classList.contains('dark-mode') ? '#fff' : '#333'};">${location.title}</h3><p style="color: ${document.body.classList.contains('dark-mode') ? '#ddd' : '#555'};">Contáctanos para más información.</p>`,
-                });
+                locations.forEach(location => {
+                    const marker = new google.maps.Marker({
+                        position: location,
+                        map: map,
+                        title: location.title,
+                        icon: {
+                            url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+                            scaledSize: new google.maps.Size(32, 32),
+                        },
+                    });
 
-                marker.addListener("click", () => {
-                    infoWindow.open(map, marker);
+                    const infoWindow = new google.maps.InfoWindow({
+                        content: `<h3 style="color: ${isDarkMode ? '#fff' : '#333'};">${location.title}</h3><p style="color: ${isDarkMode ? '#ddd' : '#555'};">Contáctanos para más información.</p>`,
+                    });
+
+                    marker.addListener("click", () => {
+                        infoWindow.open(map, marker);
+                    });
                 });
-            });
+                console.log('Mapa inicializado correctamente');
+            } catch (error) {
+                console.error('Error al inicializar el mapa:', error);
+            }
         }
 
         // Cargar el API de Google Maps
         const script = document.createElement("script");
         script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCA1NDk9w27uiB2phLIdnmvo9WDf6F-P7w&callback=initMap`;
         script.async = true;
+        script.onerror = () => console.error('Fallo al cargar la API de Google Maps');
         document.head.appendChild(script);
     </script>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
