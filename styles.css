@@ -457,7 +457,7 @@ body.dark-mode .chatbot-header {
 .close-chat {
     float: right;
     cursor: pointer;
-    color: var(--text-color);
+    color: var(--text-light);
     transition: color var(--transition-speed) ease;
 }
 
@@ -541,11 +541,19 @@ body.dark-mode .chatbot-toggle {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     max-width: 1200px;
     margin: 0 auto;
+    min-height: 400px; /* Altura mínima para el contenedor */
+    position: relative;
     transition: background-color var(--transition-speed) ease;
 }
 
 body.dark-mode .map-container {
     background-color: #1e1e1e;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    display: block;
 }
 
 body.dark-mode .section-title,
@@ -562,6 +570,7 @@ body.dark-mode .section-description {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: background-color var(--transition-speed) ease;
+    position: relative;
 }
 
 body.dark-mode .calendly-container {
@@ -673,5 +682,13 @@ body.dark-mode .calendly-container {
 
     .calendly-inline-widget {
         height: 500px;
+    }
+
+    .map-container {
+        min-height: 300px;
+    }
+
+    #map {
+        height: 300px;
     }
 }
