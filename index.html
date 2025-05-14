@@ -179,7 +179,7 @@ Ofrecemos soluciones prácticas para negocios que buscan crecer a través de la 
 <div id="formSuccess" style="display:none; padding: 20px; text-align: center;">
   <h3 id="thankYouTitle" style="color: var(--primary-color);"></h3>
   <p style="margin-top: 10px;">También puedes agendar tu cita directamente:</p>
-  <a href="https://calendly.com/rubenmarin19/consultoria-estragetica" target="_blank" class="cta-button" style="margin-top: 15px;">Agendar en Calendly</a>
+  <a href="https://calendly.com/rubenmarin19/consultoria-estragetica" target="_blank" class="cta-button" style="margin-top: 15px;">Agenda tu cita</a>
 </div>
 <script>
   const form = document.getElementById('contactForm');
@@ -201,6 +201,8 @@ Ofrecemos soluciones prácticas para negocios que buscan crecer a través de la 
     }).then(response => {
       if (response.ok) {
         form.style.display = 'none';
+        document.querySelector('#contactModal h3').style.display = 'none';
+        document.querySelector('#contactModal p').style.display = 'none';
         thankYouTitle.textContent = `¡Gracias, ${name}! Te responderemos en las próximas 24 horas.`;
         success.style.display = 'block';
         form.reset();
