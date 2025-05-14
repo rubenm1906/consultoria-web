@@ -12,434 +12,67 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navegación -->
     <header>
         <nav class="navbar">
-            <div class="logo">MarinTech Consulting</div>
+            <div class="logo" data-es="MarinTech Consulting" data-en="MarinTech Consulting">MarinTech Consulting</div>
             <ul class="nav-links">
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#experience">Experiencia</a></li>
-                <li><a href="#stats">Logros</a></li>
-                <li><a href="#why-us">Por qué Nosotros</a></li>
-                <li><a href="#testimonials">Testimonios</a></li>
-                <li><a href="#location">Ubicación</a></li>
-                <li><a href="#contact">Contacto</a></li>
-                <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="#home" data-es="Inicio" data-en="Home">Inicio</a></li>
+                <li><a href="#services" data-es="Servicios" data-en="Services">Servicios</a></li>
+                <li><a href="#experience" data-es="Experiencia" data-en="Experience">Experiencia</a></li>
+                <li><a href="#stats" data-es="Logros" data-en="Achievements">Logros</a></li>
+                <li><a href="#why-us" data-es="Por qué Nosotros" data-en="Why Us">Por qué Nosotros</a></li>
+                <li><a href="#testimonials" data-es="Testimonios" data-en="Testimonials">Testimonios</a></li>
+                <li><a href="#location" data-es="Ubicación" data-en="Location">Ubicación</a></li>
+                <li><a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+                <li><a href="#newsletter" data-es="Newsletter" data-en="Newsletter">Newsletter</a></li>
+                <li><button id="lang-toggle" class="lang-toggle">EN</button></li>
             </ul>
             <button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
         </nav>
     </header>
 
-    <!-- Hero -->
     <section id="home" class="hero" data-aos="fade-up">
         <div class="hero-content">
-            <h1>Soluciones Tecnológicas Innovadoras</h1>
-            <p>Transformamos tu negocio con más de 16 años de experiencia en TI, iGaming y Retail.</p>
-            <a href="#contact" class="cta-button">Solicita una Consulta</a>
+            <h1 data-es="Soluciones Tecnológicas Innovadoras" data-en="Innovative Tech Solutions">Soluciones Tecnológicas Innovadoras</h1>
+            <p data-es="Transformamos tu negocio con más de 16 años de experiencia en TI, iGaming y Retail." data-en="We transform your business with over 16 years of experience in IT, iGaming, and Retail.">Transformamos tu negocio con más de 16 años de experiencia en TI, iGaming y Retail.</p>
+            <a href="#contact" class="cta-button" data-es="Solicita una Consulta" data-en="Request a Consultation">Solicita una Consulta</a>
         </div>
     </section>
 
-    <!-- Servicios -->
     <section id="services" class="section" data-aos="fade-up">
-        <h2>Nuestros Servicios</h2>
+        <h2 data-es="Nuestros Servicios" data-en="Our Services">Nuestros Servicios</h2>
         <div class="services-grid">
             <div class="service-card" data-aos="zoom-in">
                 <i class="fas fa-project-diagram"></i>
-                <h3>Gestión de Proyectos Digitales</h3>
-                <p>Lideramos proyectos complejos con metodologías Agile.</p>
+                <h3 data-es="Gestión de Proyectos Digitales" data-en="Digital Project Management">Gestión de Proyectos Digitales</h3>
+                <p data-es="Lideramos proyectos complejos con metodologías Agile." data-en="We lead complex projects with Agile methodologies.">Lideramos proyectos complejos con metodologías Agile.</p>
             </div>
             <div class="service-card" data-aos="zoom-in">
                 <i class="fas fa-code"></i>
-                <h3>Desarrollo de Software Empresarial</h3>
-                <p>Soluciones personalizadas con PHP, JavaScript y APIs.</p>
+                <h3 data-es="Desarrollo de Software Empresarial" data-en="Enterprise Software Development">Desarrollo de Software Empresarial</h3>
+                <p data-es="Soluciones personalizadas con PHP, JavaScript y APIs." data-en="Custom solutions with PHP, JavaScript, and APIs.">Soluciones personalizadas con PHP, JavaScript y APIs.</p>
             </div>
             <div class="service-card" data-aos="zoom-in">
                 <i class="fas fa-brain"></i>
-                <h3>Automatización con IA</h3>
-                <p>Optimizamos procesos con IA avanzada.</p>
+                <h3 data-es="Automatización con IA" data-en="Automation with AI">Automatización con IA</h3>
+                <p data-es="Optimizamos procesos con IA avanzada." data-en="We optimize processes with advanced AI.">Optimizamos procesos con IA avanzada.</p>
             </div>
             <div class="service-card" data-aos="zoom-in">
                 <i class="fas fa-chart-line"></i>
-                <h3>Consultoría Estratégica en TI</h3>
-                <p>Expertise en TI, iGaming y Retail.</p>
+                <h3 data-es="Consultoría Estratégica en TI" data-en="Strategic IT Consulting">Consultoría Estratégica en TI</h3>
+                <p data-es="Expertise en TI, iGaming y Retail." data-en="Expertise in IT, iGaming, and Retail.">Expertise en TI, iGaming y Retail.</p>
             </div>
         </div>
     </section>
 
-    <!-- Experiencia -->
-    <section id="experience" class="section dark-bg" data-aos="fade-right">
-        <h2>Nuestra Experiencia</h2>
-        <div class="timeline">
-            <div class="timeline-item" data-aos="fade-left">
-                <h3>Automatización de Procesos</h3>
-                <p><em>2022 - Actualidad</em></p>
-                <p>Solución que redujo costos en un 40%.</p>
-            </div>
-            <div class="timeline-item" data-aos="fade-left">
-                <h3>Integración de iGaming</h3>
-                <p><em>2021</em></p>
-                <p>Implementación en el mercado español.</p>
-            </div>
-            <div class="timeline-item" data-aos="fade-left">
-                <h3>Proyectos Globales</h3>
-                <p><em>2018 - 2021</em></p>
-                <p>Más de 40 proyectos en mercados regulados.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Estadísticas -->
-    <section id="stats" class="section dark-bg" data-aos="fade-up">
-        <h2>Nuestros Logros</h2>
-        <div class="stats-grid">
-            <div class="stat-item" data-aos="zoom-in">
-                <h3 class="stat-number" data-target="16">0</h3>
-                <p>Años de Experiencia</p>
-            </div>
-            <div class="stat-item" data-aos="zoom-in">
-                <h3 class="stat-number" data-target="40">0</h3>
-                <p>Proyectos Completados</p>
-            </div>
-            <div class="stat-item" data-aos="zoom-in">
-                <h3 class="stat-number" data-target="40">0</h3>
-                <p>% Reducción de Costos</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Por qué Nosotros -->
-    <section id="why-us" class="section" data-aos="fade-up">
-        <h2>Por qué Elegirnos</h2>
-        <div class="why-us-grid">
-            <div class="why-us-item" data-aos="zoom-in">
-                <i class="fas fa-clock"></i>
-                <h3>16+ Años de Experiencia</h3>
-                <p>Un historial probado.</p>
-            </div>
-            <div class="why-us-item" data-aos="zoom-in">
-                <i class="fas fa-bullseye"></i>
-                <h3>Enfoque en Resultados</h3>
-                <p>Valor tangible para tu negocio.</p>
-            </div>
-            <div class="why-us-item" data-aos="zoom-in">
-                <i class="fas fa-users"></i>
-                <h3>Equipo Multidisciplinario</h3>
-                <p>Expertos para tu éxito.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonios -->
-    <section id="testimonials" class="section" data-aos="fade-up">
-        <h2>Lo Que Dicen Nuestros Clientes</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-card" data-aos="zoom-in">
-                <p>"Redujeron costos en un 40%."</p>
-                <h4>Director de Compras, BestSecret</h4>
-            </div>
-            <div class="testimonial-card" data-aos="zoom-in">
-                <p>"Éxito en el mercado español."</p>
-                <h4>Gerente, Rank International</h4>
-            </div>
-            <div class="testimonial-card" data-aos="zoom-in">
-                <p>"Más de 40 proyectos integrados."</p>
-                <h4>Jefe de Operaciones, NetEnt</h4>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ubicación -->
-    <section id="location" class="section dark-bg" data-aos="fade-up">
-        <h2 class="section-title">Nuestra Ubicación</h2>
-        <p class="section-description">Encuéntranos en nuestras oficinas o explora las regiones donde operamos globalmente.</p>
-        <div class="map-container">
-            <div id="map" style="height: 400px; width: 100%;"></div>
-            <div id="map-error" style="display: none; color: #fff; text-align: center; padding: 20px;">
-                No se pudo cargar el mapa. Por favor, verifica tu conexión o intenta de nuevo más tarde.
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contact" class="section" data-aos="fade-up">
-        <h2>Contáctanos</h2>
-        <p>Agenda una consulta estratégica con nuestro equipo:</p>
-        <div class="calendly-container">
-            <div id="calendly-widget" class="calendly-inline-widget" data-url="https://calendly.com/rubenmarin19/consultoria-estragetica" style="min-width:320px;height:630px;"></div>
-            <div id="calendly-error" style="display: none; color: #555; text-align: center; padding: 20px;">
-                No se pudo cargar el calendario. Por favor, usa las opciones alternativas de contacto.
-            </div>
-        </div>
-        <div class="contact-options">
-            <p>¿Prefieres otra forma de contacto?</p>
-            <a href="mailto:contacto@marintech.com" class="contact-link">Envíanos un correo</a>
-            <a href="https://wa.me/+584123456789" target="_blank" class="contact-link">Contáctanos por WhatsApp</a>
-        </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section id="newsletter" class="section" data-aos="fade-up">
-        <h2>Suscríbete a Nuestro Newsletter</h2>
-        <p class="section-description">Mantente al día con las últimas tendencias en TI, iGaming y Retail.</p>
-        <div class="newsletter-form-container">
-            <form id="newsletter-form" class="newsletter-form">
-                <input type="email" placeholder="Tu correo electrónico" required>
-                <button type="submit" class="cta-button">Suscribirse</button>
-            </form>
-        </div>
-        <div class="newsletter-articles">
-            <h3 class="section-subtitle">Últimas Actualizaciones</h3>
-            <div class="article-grid">
-                <div class="article-item" data-aos="zoom-in">
-                    <h4>Grok 3: El Nuevo Referente en Inteligencia Artificial</h4>
-                    <p>Elon Musk y xAI han lanzado Grok 3 en febrero de 2025, un modelo que promete revolucionar la IA con su capacidad de razonamiento avanzado y "pensamiento transparente".</p>
-                </div>
-                <div class="article-item" data-aos="zoom-in">
-                    <h4>IA y Automatización: Transformando Industrias en 2025</h4>
-                    <p>La IA está optimizando procesos en ciberseguridad y atención médica, mejorando la productividad en un 30% según informes recientes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 MarinTech Consulting. Todos los derechos reservados.</p>
-    </footer>
-
-    <!-- Chatbot -->
-    <div class="chatbot">
-        <div class="chatbot-header">Chatbot MarinTech <span class="close-chat">✖</span></div>
-        <div class="chatbot-body">
-            <p>¡Hola! ¿En qué puedo ayudarte hoy?</p>
-        </div>
-        <input type="text" id="chatbot-input" placeholder="Escribe aquí...">
-    </div>
-    <button id="chatbot-toggle" class="chatbot-toggle"><i class="fas fa-comment"></i></button>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Navegación suave
-            document.querySelectorAll('.nav-links a').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-                });
+        document.getElementById('lang-toggle').addEventListener('click', () => {
+            const lang = document.documentElement.lang === 'es' ? 'en' : 'es';
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-en], [data-es]').forEach(el => {
+                el.textContent = el.dataset[lang];
             });
-
-            // Menú hamburguesa
-            const navbar = document.querySelector('.navbar');
-            const navLinks = document.querySelector('.nav-links');
-            navbar.addEventListener('click', (e) => {
-                if (e.target.tagName !== 'A' && e.target.tagName !== 'BUTTON') navLinks.classList.toggle('active');
-            });
-
-            // Modo oscuro
-            const toggleButton = document.getElementById('theme-toggle');
-            toggleButton.addEventListener('click', () => {
-                document.body.classList.toggle('dark-mode');
-                const icon = toggleButton.querySelector('i');
-                icon.classList.toggle('fa-moon');
-                icon.classList.toggle('fa-sun');
-                localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-                // Reiniciar mapa al cambiar tema
-                if (window.google && window.google.maps) {
-                    const mapContainer = document.getElementById('map');
-                    if (mapContainer) {
-                        mapContainer.innerHTML = ''; // Limpiar mapa existente
-                        initMap(); // Reiniciar mapa
-                    }
-                }
-            });
-            if (localStorage.getItem('theme') === 'dark') {
-                document.body.classList.add('dark-mode');
-                toggleButton.querySelector('i').classList.replace('fa-moon', 'fa-sun');
-            }
-
-            // Chatbot
-            const chatbotToggle = document.getElementById('chatbot-toggle');
-            const chatbot = document.querySelector('.chatbot');
-            const closeChat = document.querySelector('.close-chat');
-            const chatbotInput = document.getElementById('chatbot-input');
-            const chatbotBody = document.querySelector('.chatbot-body');
-
-            if (chatbotToggle && chatbot) {
-                chatbotToggle.style.display = 'block';
-                chatbotToggle.addEventListener('click', () => {
-                    chatbot.classList.toggle('active');
-                });
-            }
-            if (closeChat) {
-                closeChat.addEventListener('click', () => chatbot.classList.remove('active'));
-            }
-            if (chatbotInput) {
-                chatbotInput.addEventListener('keypress', (e) => {
-                    if (e.key === 'Enter' && chatbotInput.value.trim()) {
-                        const userMessage = document.createElement('p');
-                        userMessage.textContent = `Tú: ${chatbotInput.value.trim()}`;
-                        chatbotBody.appendChild(userMessage);
-                        const response = document.createElement('p');
-                        response.textContent = getBotResponse(chatbotInput.value.trim());
-                        chatbotBody.appendChild(response);
-                        chatbotInput.value = '';
-                        chatbotBody.scrollTop = chatbotBody.scrollHeight;
-                    }
-                });
-            }
-
-            function getBotResponse(input) {
-                input = input.toLowerCase().trim();
-                const responses = {
-                    'hola': '¡Hola! Bienvenido a MarinTech Consulting. ¿En qué puedo ayudarte?',
-                    'servicios': 'Ofrecemos gestión de proyectos digitales, desarrollo de software empresarial, automatización con IA y consultoría estratégica en TI. ¿Cuál te interesa más?',
-                    'proyectos': 'Hemos automatizado procesos de adquisición (reduciendo costos un 40%), integrado plataformas de iGaming y completado más de 40 proyectos globales. ¿Quieres detalles de alguno?',
-                    'contacto': 'Puedes agendar una consulta en la sección "Contáctanos" o decirme qué necesitas y te ayudo.',
-                    'costo': 'Los costos dependen del proyecto. ¿Me das más detalles para darte una idea aproximada?',
-                    'tiempo': 'El tiempo varía según la complejidad, pero usamos metodologías Agile para ser rápidos y eficientes. ¿Qué tienes en mente?',
-                    'ia': 'Usamos IA avanzada como Open AI y Grok para automatizar procesos. ¿Te interesa un caso específico?',
-                    'gracias': '¡De nada! Estoy aquí para ayudar.',
-                    'default': 'No entendí bien. ¿Puedes darme más contexto o preguntar algo como "servicios" o "contacto"?'
-                };
-                for (const key in responses) {
-                    if (input.includes(key)) return responses[key];
-                }
-                return responses['default'];
-            }
-
-            // Estadísticas
-            const stats = document.querySelectorAll('.stat-number');
-            stats.forEach(stat => {
-                const target = +stat.getAttribute('data-target');
-                let count = 0;
-                const increment = target / 50;
-                const updateCount = () => {
-                    count += increment;
-                    if (count < target) {
-                        stat.textContent = Math.ceil(count);
-                        requestAnimationFrame(updateCount);
-                    } else {
-                        stat.textContent = target;
-                    }
-                };
-                const observer = new IntersectionObserver((entries) => {
-                    if (entries[0].isIntersecting) {
-                        updateCount();
-                        observer.disconnect();
-                    }
-                }, { threshold: 0.5 });
-                observer.observe(stat);
-            });
-
-            // Newsletter
-            document.getElementById('newsletter-form').addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('¡Gracias por suscribirte! Te enviaremos las últimas novedades.');
-                e.target.reset();
-            });
-
-            // AOS
-            AOS.init({ duration: 1000, once: true });
-        });
-
-        // Inicialización del mapa con manejo de errores
-        function initMap() {
-            const mapElement = document.getElementById('map');
-            const mapErrorElement = document.getElementById('map-error');
-
-            if (!mapElement) {
-                console.error('Elemento #map no encontrado');
-                return;
-            }
-
-            const locations = [
-                { lat: 40.4168, lng: -3.7038, title: "Madrid, España - Oficina Principal" },
-                { lat: 51.5074, lng: -0.1278, title: "Londres, Reino Unido - Operaciones iGaming" },
-            ];
-
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            const mapStyle = isDarkMode
-                ? [{ elementType: "geometry", stylers: [{ color: "#0a2a4a" }] }, { elementType: "labels.text.fill", stylers: [{ color: "#ffffff" }] }]
-                : [{ elementType: "geometry", stylers: [{ color: "#f5f5f5" }] }, { elementType: "labels.text.fill", stylers: [{ color: "#333333" }] }];
-
-            try {
-                const map = new google.maps.Map(mapElement, {
-                    zoom: 3,
-                    center: locations[0],
-                    mapTypeId: "roadmap",
-                    styles: mapStyle,
-                });
-
-                locations.forEach(location => {
-                    const marker = new google.maps.Marker({
-                        position: location,
-                        map: map,
-                        title: location.title,
-                        icon: {
-                            url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png", // Updated to HTTPS
-                            scaledSize: new google.maps.Size(32, 32),
-                        },
-                    });
-
-                    const infoWindow = new google.maps.InfoWindow({
-                        content: `<h3 style="color: ${isDarkMode ? '#fff' : '#333'};">${location.title}</h3><p style="color: ${isDarkMode ? '#ddd' : '#555'};">Contáctanos para más información.</p>`,
-                    });
-
-                    marker.addListener("click", () => {
-                        infoWindow.open(map, marker);
-                    });
-                });
-
-                mapElement.style.display = 'block';
-                if (mapErrorElement) mapErrorElement.style.display = 'none';
-                console.log('Mapa inicializado correctamente');
-            } catch (error) {
-                console.error('Error al inicializar el mapa:', error);
-                if (mapElement) mapElement.style.display = 'none';
-                if (mapErrorElement) mapErrorElement.style.display = 'block';
-            }
-        }
-
-        // Cargar el API de Google Maps
-        const mapScript = document.createElement("script");
-        mapScript.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCA1NDk9w27uiB2phLIdnmvo9WDf6F-P7w&callback=initMap`;
-        mapScript.async = true;
-        mapScript.defer = true;
-        mapScript.onerror = () => {
-            console.error('Fallo al cargar la API de Google Maps');
-            const mapElement = document.getElementById('map');
-            const mapErrorElement = document.getElementById('map-error');
-            if (mapElement) mapElement.style.display = 'none';
-            if (mapErrorElement) mapErrorElement.style.display = 'block';
-        };
-        document.head.appendChild(mapScript);
-
-        // Verificar carga de Calendly
-        document.addEventListener('DOMContentLoaded', () => {
-            const calendlyWidget = document.getElementById('calendly-widget');
-            const calendlyError = document.getElementById('calendly-error');
-            const calendlyScript = document.createElement('script');
-            calendlyScript.src = "https://assets.calendly.com/assets/external/widget.js";
-            calendlyScript.async = true;
-            calendlyScript.onload = () => {
-                // Verificar si el widget de Calendly cargó correctamente
-                setTimeout(() => {
-                    const iframe = calendlyWidget.querySelector('iframe');
-                    if (!iframe || iframe.src.includes('404')) {
-                        console.error('El enlace de Calendly no es válido o no se encontró');
-                        if (calendlyWidget) calendlyWidget.style.display = 'none';
-                        if (calendlyError) calendlyError.style.display = 'block';
-                    }
-                }, 2000); // Esperar 2 segundos para que el widget intente cargar
-            };
-            calendlyScript.onerror = () => {
-                console.error('Fallo al cargar el script de Calendly');
-                if (calendlyWidget) calendlyWidget.style.display = 'none';
-                if (calendlyError) calendlyError.style.display = 'block';
-            };
-            document.head.appendChild(calendlyScript);
+            document.getElementById('lang-toggle').textContent = lang === 'es' ? 'EN' : 'ES';
         });
     </script>
 </body>
