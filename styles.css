@@ -603,6 +603,48 @@ body.dark-mode .calendly-container {
     background-color: #005ea2;
 }
 
+/* Ajuste de scroll anclado para evitar que se oculte el contenido debajo del navbar fijo */
+section {
+    scroll-margin-top: 100px;
+}
+
+/* Resto del CSS existente */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif, fallback;
+}
+
+:root {
+    --primary-color: #1a3c5e;
+    --secondary-color: #0078d4;
+    --text-color: #222;
+    --text-light: #ddd;
+    --background-color: #fff;
+    --dark-bg: #1a3c5e;
+    --dark-bg-alt: #0a2a4a;
+    --transition-speed: 0.3s;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+body.dark-mode {
+    --text-color: #e0e0e0;
+    --background-color: #121212;
+    --dark-bg: #0a2a4a;
+    --dark-bg-alt: #071a36;
+}
+
+/* ... el resto del archivo sigue igual ... */
+
+
 /* Responsive */
 @media (max-width: 768px) {
     .navbar {
