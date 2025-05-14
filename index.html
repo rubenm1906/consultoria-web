@@ -134,13 +134,41 @@ Ofrecemos soluciones prácticas para negocios que buscan crecer a través de la 
     </div>
   </div>
 </section>
-  
-<!-- Contacto -->
+
+  <!-- Contacto -->
   <section id="contact" class="section dark-bg" style="padding: 100px 20px 60px;">
   <div style="text-align: center; max-width: 800px; margin: 0 auto; padding-bottom: 40px;">
     <h2>¿Listo para impulsar tu negocio?</h2>
     <p>Contáctanos hoy mismo para una consulta gratuita y descubre cómo podemos ayudarte a alcanzar tus objetivos.</p>
-    <a href="mailto:contacto@marintech.com" class="cta-button" style="margin-top: 20px; display: inline-block;">Solicitar consulta gratuita</a>
+    <button id="openForm" class="cta-button" style="margin-top: 20px; display: inline-block;">Solicitar consulta gratuita</button>
+
+    <div id="contactModal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); justify-content: center; align-items: center; z-index: 1000;">
+      <div style="background: white; padding: 30px; border-radius: 10px; max-width: 500px; width: 90%; position: relative;">
+        <button onclick="document.getElementById('contactModal').style.display='none'" style="position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 20px; cursor: pointer;">×</button>
+        <h3>Solicita tu consulta gratuita</h3>
+        <p style="font-size: 14px; margin-bottom: 20px;">Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+        <form action="https://formspree.io/f/tu-id-aqui" method="POST">
+          <input type="text" name="name" placeholder="Nombre completo" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+          <input type="email" name="email" placeholder="Correo electrónico" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+          <input type="tel" name="phone" placeholder="Teléfono" style="width: 100%; padding: 10px; margin-bottom: 10px;">
+          <select name="topic" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+            <option value="">Selecciona el tema de interés</option>
+            <option value="presencia">Presencia Online</option>
+            <option value="automatizacion">Automatización</option>
+            <option value="inteligencia">Inteligencia Empresarial</option>
+            <option value="otro">Otro</option>
+          </select>
+          <textarea name="message" placeholder="Cuéntanos sobre tu proyecto o consulta..." rows="4" required style="width: 100%; padding: 10px; margin-bottom: 15px;"></textarea>
+          <button type="submit" class="cta-button" style="width: 100%;">Enviar solicitud</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('openForm').onclick = function() {
+        document.getElementById('contactModal').style.display = 'flex';
+      }
+    </script>
   </div>
   
 </section>
@@ -150,6 +178,7 @@ Ofrecemos soluciones prácticas para negocios que buscan crecer a través de la 
   <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: 0 auto; gap: 40px;">
     <div>
       <h4 style="margin-bottom: 10px;">MarinTech</h4>
+      
     </div>
     <div>
       <h4 style="margin-bottom: 10px;">Enlaces</h4>
@@ -175,4 +204,3 @@ Ofrecemos soluciones prácticas para negocios que buscan crecer a través de la 
   
 </body>
 </html>
-
