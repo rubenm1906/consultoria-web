@@ -117,9 +117,10 @@ body.dark-mode .hero {
 }
 
 .hero-content p {
-    font-size: 20px;
-    margin-bottom: 30px;
-    max-width: 700px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
 }
 
 .cta-button {
