@@ -55,6 +55,10 @@ body.dark-mode .navbar {
     color: var(--primary-color);
 }
 
+.dark-bg .service-card h3 {
+  color: var(--text-light);
+}
+
 .nav-links {
     list-style: none;
     display: flex;
