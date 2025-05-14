@@ -30,6 +30,29 @@ body.dark-mode {
     --dark-bg-alt: #071a36;
 }
 
+/* styles.css extra para corregir visibilidad */
+
+.hero {
+    min-height: 90vh;
+    padding-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.section {
+    min-height: 400px;
+    padding-top: 80px;
+}
+
+/* Asegurar espaciado para navbar fijo */
+body {
+    padding-top: 80px;
+}
+
+/* Agrega esto a tu archivo styles.css existente debajo de las reglas para .hero y .section si ya existen */
+
 /* Navbar */
 .navbar {
     display: flex;
