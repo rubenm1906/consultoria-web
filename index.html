@@ -1,104 +1,106 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Soluciones digitales personalizadas con IA, automatización y desarrollo a medida.">
-  <meta name="keywords" content="consultoría digital, automatización, inteligencia artificial, CRM, software empresarial">
-  <title>MarinTech Consulting</title>
-  <link rel="stylesheet" href="styles_cards_flotantes.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MarinTech Consulting</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
+    <!-- Navegación -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">MarinTech</div>
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#workflow">Cómo Trabajamos</a></li>
+                <li><a href="#packages">Paquetes</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Impulsa tu Negocio con Soluciones Digitales Inteligentes</h1>
-      <p>Digitalizamos tus procesos con tecnología de vanguardia, creando soluciones personalizadas que optimizan tu operación y aceleran tu crecimiento.</p>
-      <a href="#contact" class="cta-button">Solicita una Consulta</a>
-    </div>
-  </section>
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Digitaliza tu Negocio</h1>
+            <p>Automatización y consultoría para pequeñas empresas</p>
+            <a href="#contact" class="cta-button">Solicita una Consulta</a>
+        </div>
+    </section>
 
-  <section class="section" id="services">
-    <h2>Nuestros Servicios</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Gestión de Proyectos</h3>
-        <p>Lideramos desarrollos tecnológicos de principio a fin con metodologías ágiles.</p>
-      </div>
-      <div class="service-card">
-        <h3>Automatización Empresarial</h3>
-        <p>Optimizamos procesos con IA y herramientas digitales que ahorran tiempo y dinero.</p>
-      </div>
-      <div class="service-card">
-        <h3>Desarrollo de Software</h3>
-        <p>Creamos soluciones personalizadas integradas a tus sistemas actuales.</p>
-      </div>
-      <div class="service-card">
-        <h3>Consultoría en Digitalización</h3>
-        <p>Identificamos oportunidades y trazamos un plan para transformar tu negocio.</p>
-      </div>
-    </div>
-  </section>
+    <!-- Servicios -->
+    <section id="services" class="section">
+        <h2>Nuestros Servicios</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h3>Páginas Web y Automatizaciones</h3>
+                <p>Diseñamos webs con integraciones inteligentes como WhatsApp, Chatbots y CRMs.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-robot"></i>
+                <h3>Automatización con AI</h3>
+                <p>Agentes de IA que ejecutan tareas y analizan información para tu negocio.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Analítica y Dashboards</h3>
+                <p>Conecta tus datos y descubre insights en tiempo real.</p>
+            </div>
+        </div>
+    </section>
 
-  <section class="section dark-bg" id="workflow">
-    <h2>Cómo Trabajamos</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <h3><span style="color:#00aaff; font-weight:bold;">1</span> Diagnóstico</h3>
-        <p>Analizamos tus necesidades y objetivos para crear la mejor estrategia.</p>
-      </div>
-      <div class="service-card">
-        <h3><span style="color:#00aaff; font-weight:bold;">2</span> Propuesta personalizada</h3>
-        <p>Desarrollamos un plan a medida que se ajuste a tus requerimientos.</p>
-      </div>
-      <div class="service-card">
-        <h3><span style="color:#00aaff; font-weight:bold;">3</span> Desarrollo e implementación</h3>
-        <p>Ejecutamos la estrategia con los más altos estándares de calidad.</p>
-      </div>
-      <div class="service-card">
-        <h3><span style="color:#00aaff; font-weight:bold;">4</span> Soporte y mejora continua</h3>
-        <p>Aseguramos el éxito a largo plazo con soporte constante.</p>
-      </div>
-    </div>
-  </section>
+    <!-- Cómo trabajamos -->
+    <section id="workflow" class="section dark-bg">
+        <h2>¿Cómo Trabajamos?</h2>
+        <ol class="workflow-list">
+            <li><strong>1. Diagnóstico:</strong> Entendemos tu negocio y retos digitales.</li>
+            <li><strong>2. Propuesta:</strong> Presentamos soluciones concretas y tiempos.</li>
+            <li><strong>3. Ejecución:</strong> Creamos e integramos la solución contigo.</li>
+            <li><strong>4. Soporte:</strong> Mantenimiento y mejora continua.</li>
+        </ol>
+    </section>
 
-  <section class="section" id="packages">
-    <h2>Paquetes de Servicios</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Starter Digital</h3>
-        <p><strong>Qué incluye:</strong><br>✔ Sitio Web<br>✔ Formulario de contacto<br>✔ CRM básico</p>
-        <p><strong>Ideal para:</strong><br>Negocios nuevos</p>
-      </div>
-      <div class="service-card">
-        <h3>Automatización Express</h3>
-        <p><strong>Qué incluye:</strong><br>✔ Lectura de facturas<br>✔ Integración a sistemas<br>✔ Flujo automatizado</p>
-        <p><strong>Ideal para:</strong><br>PyMEs</p>
-      </div>
-      <div class="service-card">
-        <h3>AI Boost</h3>
-        <p><strong>Qué incluye:</strong><br>✔ Dashboards<br>✔ GPT Integrado<br>✔ Análisis predictivo</p>
-        <p><strong>Ideal para:</strong><br>Empresas en crecimiento</p>
-      </div>
-    </div>
-  </section>
+    <!-- Paquetes -->
+    <section id="packages" class="section">
+        <h2>Paquetes de Servicios</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Básico</h3>
+                <p>Landing page + Contacto WhatsApp + SEO básico</p>
+                <p><strong>Desde 200€</strong></p>
+            </div>
+            <div class="service-card">
+                <h3>Profesional</h3>
+                <p>Web + Integraciones + Automatizaciones + Chatbot</p>
+                <p><strong>Desde 500€</strong></p>
+            </div>
+            <div class="service-card">
+                <h3>Premium</h3>
+                <p>Solución completa a medida + Dashboards + AI Agents</p>
+                <p><strong>Desde 1000€</strong></p>
+            </div>
+        </div>
+    </section>
 
-  <section class="section" id="contact">
-    <h2>Contáctanos</h2>
-    <p>Agenda una consulta estratégica con nuestro equipo:</p>
-    <form class="newsletter-form" action="mailto:contacto@marintech.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Tu nombre" required />
-      <input type="email" name="email" placeholder="Tu correo electrónico" required />
-      <textarea name="message" placeholder="Cuéntanos qué necesitas" required></textarea>
-      <button type="submit">Enviar Mensaje</button>
-    </form>
-  </section>
+    <!-- Contacto -->
+    <section id="contact" class="section dark-bg">
+        <h2>Contáctanos</h2>
+        <p>Agenda una llamada o escríbenos directamente</p>
+        <div class="contact-options">
+            <a href="mailto:contacto@marintech.com" class="contact-link">Email</a>
+            <a href="https://wa.me/+584123456789" class="contact-link" target="_blank">WhatsApp</a>
+            <a href="https://calendly.com/rubenmarin19/consultoria-estragetica" class="contact-link" target="_blank">Agendar en Calendly</a>
+        </div>
+    </section>
 
-  <footer class="section">
-    <p>© 2025 MarinTech Consulting. Todos los derechos reservados.</p>
-  </footer>
-
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 MarinTech Consulting</p>
+    </footer>
 </body>
 </html>
