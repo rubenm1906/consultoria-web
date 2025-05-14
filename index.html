@@ -147,7 +147,35 @@ Ofrecemos soluciones prácticas para negocios que buscan crecer a través de la 
         <button onclick="document.getElementById('contactModal').style.display='none'" style="position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 20px; cursor: pointer;">×</button>
         <h3 style="color: var(--primary-color); font-size: 20px; font-weight: 600; margin-bottom: 5px;">Solicita tu consulta gratuita</h3>
         <p style="font-size: 14px; margin-bottom: 20px; color: #444;">Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
-        <form id="contactForm" style="display: flex; flex-direction: column; gap: 15px;">$1</form>
+        <form id="contactForm" style="display: flex; flex-direction: column; gap: 15px;">
+  <div style="position: relative;">
+    <i class="fas fa-user" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--secondary-color);"></i>
+    <input type="text" name="name" placeholder="Nombre completo" required style="width: 100%; padding: 10px 10px 10px 35px; border-radius: 5px; border: 1px solid #ccc;">
+  </div>
+  <div style="position: relative;">
+    <i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--secondary-color);"></i>
+    <input type="email" name="email" placeholder="Correo electrónico" required style="width: 100%; padding: 10px 10px 10px 35px; border-radius: 5px; border: 1px solid #ccc;">
+  </div>
+  <div style="position: relative;">
+    <i class="fas fa-phone" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--secondary-color);"></i>
+    <input type="tel" name="phone" placeholder="Teléfono" style="width: 100%; padding: 10px 10px 10px 35px; border-radius: 5px; border: 1px solid #ccc;">
+  </div>
+  <div style="position: relative;">
+    <i class="fas fa-list" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--secondary-color);"></i>
+    <select name="topic" required style="width: 100%; padding: 10px 10px 10px 35px; border-radius: 5px; border: 1px solid #ccc;">
+      <option value="">Selecciona el tema de interés</option>
+      <option value="presencia">Presencia Online</option>
+      <option value="automatizacion">Automatización</option>
+      <option value="inteligencia">Inteligencia Empresarial</option>
+      <option value="otro">Otro</option>
+    </select>
+  </div>
+  <div style="position: relative;">
+    <i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; color: var(--secondary-color);"></i>
+    <textarea name="message" placeholder="Cuéntanos sobre tu proyecto o consulta..." rows="4" required style="width: 100%; padding: 10px 10px 10px 35px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+  </div>
+  <button type="submit" class="cta-button" style="width: 100%; background-color: var(--secondary-color); color: white; border: none; padding: 12px; border-radius: 5px; font-weight: 600;">Enviar solicitud</button>
+</form>
 <div id="formSuccess" style="display:none; padding: 20px; text-align: center;">
   <h3 id="thankYouTitle" style="color: var(--primary-color);"></h3>
   <p style="margin-top: 10px;">También puedes agendar tu cita directamente:</p>
