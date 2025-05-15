@@ -1,18 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MarinTech Consulting</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
-
   <header>
     <nav class="navbar">
       <div class="logo">MarinTech</div>
-      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+      <button class="nav-toggle">☰</button>
       <ul class="nav-links">
         <li><a href="#home">Inicio</a></li>
         <li><a href="#services">Servicios</a></li>
@@ -27,16 +28,42 @@
   <section id="home" class="hero">
     <div class="hero-content">
       <h1>Soluciones Tecnológicas Innovadoras</h1>
-      <p>Impulsamos negocios con desarrollo web, automatización, IA y consultoría digital.</p>
+      <p>Ofrecemos soluciones prácticas para negocios que buscan crecer a través de la tecnología. Desde páginas web, automatización con IA y dashboards, hasta consultoría estratégica en TI.</p>
       <a href="#contact" class="cta-button">Solicita una Consulta</a>
     </div>
   </section>
+
+  <section id="services" class="section">
+    <h2>Nuestros Servicios</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-globe"></i>
+        <h3>Creación de Páginas Web</h3>
+        <p>Sitios modernos y optimizados para atraer clientes, con enfoque en conversión, SEO y experiencia.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-cogs"></i>
+        <h3>Automatización con IA</h3>
+        <p>Implementamos automatizaciones con agentes GPT personalizados, flujos inteligentes y dashboards.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-project-diagram"></i>
+        <h3>Consultoría Estratégica</h3>
+        <p>Desde la planificación tecnológica hasta la ejecución de proyectos digitales de alto impacto.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>
+      <p>© 2025 MarinTech Consulting</p>
+    </div>
+  </footer>
 
   <script>
     document.querySelector('.nav-toggle').addEventListener('click', () => {
       document.querySelector('.nav-links').classList.toggle('active');
     });
   </script>
-
 </body>
 </html>
