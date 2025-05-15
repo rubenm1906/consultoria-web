@@ -694,8 +694,96 @@ body.dark-mode .calendly-container {
 }
 
 
-/* Calendly iframe container inside modal */
-#formSuccess iframe {
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hero {
+    height: auto;
+    padding: 60px 20px;
+    background-position: center;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  .services-grid,
+  .why-us-grid,
+  .testimonials-grid,
+  .stats-grid,
+  .article-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .service-card,
+  .why-us-item,
+  .testimonial-card,
+  .stat-item {
+    text-align: center;
+  }
+
+  .section {
+    padding: 60px 20px;
+  }
+
+  .timeline-item {
+    padding-left: 20px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .chatbot {
+    width: 90%;
+    right: 5%;
+  }
+
+  .calendly-container {
+    padding: 10px;
+  }
+
+  .map-container {
+    min-height: 300px;
+  }
+
+  #map {
+    height: 300px;
+  }
+
+  footer div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer ul {
+    padding: 0;
+  }
 }
