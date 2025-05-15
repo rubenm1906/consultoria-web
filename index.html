@@ -8,40 +8,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
-    @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px 20px;
-      }
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
-        gap: 10px;
-      }
-      .nav-links.active {
-        display: flex;
-      }
-      .nav-toggle {
-        font-size: 28px;
-        cursor: pointer;
-        align-self: flex-end;
-        background: none;
-        border: none;
-        color: var(--primary-color);
-      }
-      .hero {
-        padding-top: 120px;
-      }
-      #contactForm select {
-        padding-left: 45px !important;
-      }
+    .service-card h3 span {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-color: var(--secondary-color);
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 50%;
+      margin-right: 10px;
+      line-height: 30px;
     }
   </style>
 </head>
 <body>
+  <!-- Navegación -->
   <header>
     <nav class="navbar">
       <div class="logo">MarinTech</div>
@@ -57,31 +39,8 @@
     </nav>
   </header>
 
-  <section id="home" class="hero" style="height:auto; padding: 140px 20px 60px; text-align:center; background: linear-gradient(135deg, #1a3c5e, #0078d4); color: #fff;">
-    <div class="hero-content" style="max-width: 800px; margin: 0 auto;">
-      <h1 style="font-size: 42px; font-weight: 700; margin-bottom: 20px;">Soluciones Tecnológicas Innovadoras</h1>
-      <p style="font-size: 18px; margin-bottom: 30px;">Ofrecemos soluciones prácticas para negocios que buscan crecer a través de la tecnología. Desde el desarrollo de páginas web modernas, hasta automatización con inteligencia artificial, dashboards y consultoría en TI, te ayudamos a implementar lo que realmente hace la diferencia.</p>
-      <a href="#contact" class="cta-button" style="background:#fff; color: var(--secondary-color); padding: 12px 24px; border-radius: 6px; font-weight: 600; text-decoration: none;">Solicita una Consulta</a>
-    </div>
-  </section>
-  
-  <!-- Navegación -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">MarinTech</div>
-      <ul class="nav-links">
-        <li><a href="#home">Inicio</a></li>
-        <li><a href="#services">Servicios</a></li>
-        <li><a href="#workflow">Cómo Trabajamos</a></li>
-        <li><a href="#packages">Paquetes</a></li>
-        <li><a href="#about">Sobre Mí</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-
   <!-- Hero -->
-  <section id="home" class="hero">
+  <section id="home" class="hero" style="padding-top: 140px;">
   <div class="hero-content" style="text-align: center; max-width: 900px; margin: 0 auto; padding: 0 20px;">
     <h1 style="font-size: 56px; margin-bottom: 25px; font-weight: 700; color: #fff; line-height: 1.2;">Soluciones Tecnológicas Innovadoras</h1>
     <p style="font-size: 18px; line-height: 1.7; color: #f0f0f0; max-width: 800px; margin: 0 auto 30px;">
@@ -342,5 +301,14 @@ Ofrecemos soluciones prácticas para negocios que buscan crecer a través de la 
 </footer>
 
   
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  }
+</script>
 </body>
 </html>
