@@ -694,36 +694,48 @@ body.dark-mode .calendly-container {
 }
 
 
-/* ====== RESPONSIVE DESIGN ====== */
+/* === RESPONSIVE RULES === */
+
+/* ==== BASE RESPONSIVE STYLES ==== */
 @media (max-width: 768px) {
+  body {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+  }
+
   .navbar {
     flex-direction: column;
     padding: 15px;
+    align-items: flex-start;
   }
 
   .nav-links {
     flex-direction: column;
-    align-items: center;
     width: 100%;
+    align-items: flex-start;
+    margin-top: 10px;
   }
 
   .nav-links li {
-    margin: 10px 0;
+    margin: 10px 20px;
   }
 
   .hero {
+    padding-top: 140px; /* espacio para navbar fijo */
     height: auto;
-    padding: 60px 20px;
+    padding: 80px 20px 40px;
     background-position: center;
   }
 
   .hero-content h1 {
-    font-size: 30px;
+    font-size: 32px;
+    line-height: 1.4;
   }
 
   .hero-content p {
     font-size: 16px;
-    padding: 0 10px;
+    margin-bottom: 20px;
   }
 
   .cta-button {
@@ -738,52 +750,53 @@ body.dark-mode .calendly-container {
   .article-grid {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 0 20px;
-  }
-
-  .service-card,
-  .why-us-item,
-  .testimonial-card,
-  .stat-item {
-    text-align: center;
   }
 
   .section {
     padding: 60px 20px;
   }
 
-  .timeline-item {
-    padding-left: 20px;
+  .service-card,
+  .why-us-item,
+  .testimonial-card {
+    text-align: center;
   }
 
-  .newsletter-form {
-    flex-direction: column;
+  /* Formulario */
+  #contactForm input,
+  #contactForm select,
+  #contactForm textarea {
+    padding-left: 40px !important;
   }
 
-  .chatbot {
-    width: 90%;
-    right: 5%;
+  #contactForm i {
+    left: 10px;
+    top: 14px;
   }
 
-  .calendly-container {
-    padding: 10px;
+  #contactForm select {
+    background-position-x: 95% !important;
   }
 
-  .map-container {
-    min-height: 300px;
+  /* Calendly embebido */
+  #formSuccess iframe {
+    max-width: 100%;
+    height: 600px;
+    overflow: auto;
   }
 
-  #map {
-    height: 300px;
-  }
-
+  /* Footer */
   footer div {
     flex-direction: column;
-    align-items: center;
     text-align: center;
+    gap: 20px;
   }
 
   footer ul {
     padding: 0;
+  }
+
+  footer p {
+    margin-bottom: 5px;
   }
 }
