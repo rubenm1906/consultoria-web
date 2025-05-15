@@ -55,10 +55,6 @@ body.dark-mode .navbar {
     color: var(--primary-color);
 }
 
-.dark-bg .service-card h3 {
-  color: var(--text-light);
-}
-
 .nav-links {
     list-style: none;
     display: flex;
@@ -673,18 +669,6 @@ body.dark-mode .calendly-container {
     .newsletter-form {
         flex-direction: column;
         gap: 10px;
-    }
-    .service-card h3 span {
-        display: inline-block;
-      width: 28px;
-      height: 28px;
-      background-color: var(--secondary-color);
-      color: white;
-      font-weight: bold;
-      text-align: center;
-      border-radius: 50%;
-      margin-right: 10px;
-      line-height: 28px;
     }
 
     .chatbot {
