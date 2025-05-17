@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MarinTech Consulting</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Hero con botón funcional -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Soluciones Tecnológicas Innovadoras</h1>
+    <p>Digitaliza tu negocio con soluciones prácticas, accesibles y escalables.</p>
+    <button class="cta-button" onclick="document.getElementById('form-modal').style.display='block'">Solicitar consulta gratuita</button>
+  </div>
+</section>
+
+<!-- Modal de formulario -->
+<div id="form-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.6); z-index:9999;">
+  <div style="background:#fff; max-width:500px; margin:80px auto; padding:20px; border-radius:8px; position:relative;">
+    <span style="position:absolute; top:10px; right:15px; cursor:pointer;" onclick="document.getElementById('form-modal').style.display='none'">&times;</span>
+    <form id="contact-form">
+      <h2>Contáctanos</h2>
+      <input type="text" placeholder="Nombre" required style="width:100%; margin-bottom:10px;">
+      <input type="email" placeholder="Correo electrónico" required style="width:100%; margin-bottom:10px;">
+      <textarea placeholder="Mensaje" required style="width:100%; margin-bottom:10px;"></textarea>
+      <button type="submit" class="cta-button">Enviar</button>
+    </form>
+  </div>
+</div>
+
+<!-- Confirmación + Calendly -->
+<div id="post-submit" style="display: none;">
+  <div class="confirmation-message">
+    <h2>¡Gracias, Ruben!</h2>
+    <p>Te responderemos en las próximas 24 horas.</p>
+    <button class="cta-button" onclick="document.getElementById('calendly-container').style.display='block'; this.style.display='none';">Agenda tu cita</button>
+  </div>
+  <div id="calendly-container" style="display: none; margin-top: 20px;">
+    <iframe src="https://calendly.com/rubenmarin/consultoria?hide_event_type_details=1&hide_gdpr_banner=1"
+      width="100%" height="620" frameborder="0" scrolling="no"></iframe>
+  </div>
+</div>
+
+<!-- Footer estructurado correctamente -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>MarinTech</h4>
+      <p>Soluciones digitales profesionales para tu negocio.</p>
+    </div>
+    <div class="footer-column">
+      <h4>Contacto</h4>
+      <p>contacto@marintech.com</p>
+      <p>+58 412 3456789</p>
+      <p>Düsseldorf, Alemania</p>
+      <div class="social-icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-github"></i>
+      </div>
+    </div>
+  </div>
+  <p class="footer-bottom">© 2025 MarinTech Consulting. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Script -->
+<script>
+  function showPostSubmit() {
+    document.getElementById('post-submit').style.display = 'block';
+    window.scrollTo({ top: document.getElementById('post-submit').offsetTop - 60, behavior: 'smooth' });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        document.getElementById('form-modal').style.display = 'none';
+        showPostSubmit();
+      });
+    }
+  });
+</script>
+</body>
+</html>
