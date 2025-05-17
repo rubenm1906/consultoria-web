@@ -151,65 +151,14 @@ body {
 }
 
 /* === MOBILE HERO FIX === */
+
 @media (max-width: 768px) {
   .hero {
     padding: 100px 20px 40px;
     background: linear-gradient(to bottom, #1a3c5e, #0078d4);
     flex-direction: column;
+    overflow-x: hidden;
+    background-size: cover;
+    background-position: center;
   }
 
-  .hero-content h1 {
-    font-size: 26px;
-  }
-
-  .hero-content p {
-    font-size: 15px;
-  }
-
-  .cta-button {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-
-  .nav-toggle {
-    display: block;
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--primary-color);
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background-color: var(--background-color);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  .section {
-    padding: 60px 20px;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .footer {
-    padding: 40px 20px;
-  }
-}
