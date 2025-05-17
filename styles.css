@@ -154,11 +154,12 @@ body {
 
 @media (max-width: 768px) {
   .hero {
-    padding: 100px 20px 40px;
-    background: linear-gradient(to bottom, #1a3c5e, #0078d4);
     flex-direction: column;
-    overflow-x: hidden;
+    padding: 100px 20px 40px;
     background-size: cover;
     background-position: center;
+    overflow-x: hidden;
   }
+}
+
 
