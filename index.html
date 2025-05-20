@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MarinTech Consulting</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    .language-select {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 2000;
+    }
+    .language-select select {
+      font-size: 12px;
+      padding: 4px 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="language-select">
+    <select id="languageSwitcher">
+      <option value="es">ES</option>
+      <option value="en">EN</option>
+      <option value="de">DE</option>
+    </select>
+  </div>
+
+  <nav class="navbar">
+    <div class="logo">MarinTech</div>
+    <button class="nav-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#home" id="navHome">Inicio</a></li>
+      <li><a href="#services" id="navServices">Servicios</a></li>
+      <li><a href="#workflow" id="navWorkflow">Cómo Trabajamos</a></li>
+      <li><a href="#about" id="navAbout">Nosotros</a></li>
+      <li><a href="#packages" id="navPackages">Paquetes</a></li>
+      <li><a href="#contact" id="navContact">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero desktop-hero" id="home">
+    <div class="hero-content">
+      <h1 id="heroTitle">Impulsamos tu evolución digital</h1>
+      <p id="heroText">Texto de introducción...</p>
+      <a class="cta-button" href="#contact" id="ctaButton">Solicita una consulta</a>
+    </div>
+  </section>
+
+  <script>
+    const translations = {
+      es: {
+        heroTitle: "Impulsamos tu evolución digital",
+        heroText: "Conectamos estrategia, tecnología y automatización para transformar tu negocio...",
+        ctaButton: "Solicita una consulta",
+        nav: {
+          navHome: "Inicio",
+          navServices: "Servicios",
+          navWorkflow: "Cómo Trabajamos",
+          navAbout: "Nosotros",
+          navPackages: "Paquetes",
+          navContact: "Contacto"
+        }
+      },
+      en: {
+        heroTitle: "We drive your digital evolution",
+        heroText: "We connect strategy, technology and automation to transform your business...",
+        ctaButton: "Request a consultation",
+        nav: {
+          navHome: "Home",
+          navServices: "Services",
+          navWorkflow: "How We Work",
+          navAbout: "About Us",
+          navPackages: "Packages",
+          navContact: "Contact"
+        }
+      },
+      de: {
+        heroTitle: "Wir treiben Ihre digitale Entwicklung voran",
+        heroText: "Wir verbinden Strategie, Technologie und Automatisierung, um Ihr Unternehmen zu transformieren...",
+        ctaButton: "Beratung anfordern",
+        nav: {
+          navHome: "Startseite",
+          navServices: "Dienstleistungen",
+          navWorkflow: "Unser Vorgehen",
+          navAbout: "Über uns",
+          navPackages: "Pakete",
+          navContact: "Kontakt"
+        }
+      }
+    };
+
+    const switchLang = (lang) => {
+      const t = translations[lang];
+      document.getElementById("heroTitle").textContent = t.heroTitle;
+      document.getElementById("heroText").textContent = t.heroText;
+      document.getElementById("ctaButton").textContent = t.ctaButton;
+
+      for (const key in t.nav) {
+        document.getElementById(key).textContent = t.nav[key];
+      }
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const select = document.getElementById("languageSwitcher");
+      const lang = localStorage.getItem("lang") || "en";
+      select.value = lang;
+      switchLang(lang);
+
+      select.addEventListener("change", () => {
+        const selected = select.value;
+        localStorage.setItem("lang", selected);
+        switchLang(selected);
+      });
+    });
+
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
