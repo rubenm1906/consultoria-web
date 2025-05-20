@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarinTech</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://unpkg.com/i18next@21.6.14/dist/umd/i18next.min.js"></script>
+</head>
+<body>
+    <header class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="logo">MarinTech</div>
+        <ul class="nav-links">
+            <li><a href="#inicio" data-i18n="nav.inicio">Inicio</a></li>
+            <li><a href="#servicios" data-i18n="nav.servicios">Servicios</a></li>
+            <li><a href="#como-trabajamos" data-i18n="nav.comoTrabajamos">Cómo Trabajamos</a></li>
+            <li><a href="#paquetes" data-i18n="nav.paquetes">Paquetes</a></li>
+            <li><a href="#sobre-mi" data-i18n="nav.sobreMi">Sobre Mí</a></li>
+            <li><a href="#contacto" data-i18n="nav.contacto">Contacto</a></li>
+            <li><a href="#" class="lang-switch" data-lang="en">EN</a></li>
+            <li><a href="#" class="lang-switch" data-lang="de">DE</a></li>
+            <li><a href="#" class="lang-switch" data-lang="es">ES</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+    </header>
+
+    <section class="hero desktop-hero">
+        <div class="hero-content">
+            <h1 data-i18n="hero.title">Soluciones Tecnológicas Innovadoras</h1>
+            <p data-i18n="hero.description">Ofrecemos soluciones prácticas para negocios que buscan crecer a través de la tecnología. Desde el desarrollo de páginas web modernas, hasta automatización con inteligencia artificial, dashboards y consultoría en TI, te ayudamos a implementar lo que realmente hace la diferencia.</p>
+            <a href="#contacto" class="cta-button" data-i18n="hero.cta">Solicita una Consulta</a>
+        </div>
+    </section>
+
+    <section class="hero mobile-hero">
+        <div class="hero-content">
+            <h1 data-i18n="hero.title">Soluciones Tecnológicas Innovadoras</h1>
+            <p data-i18n="hero.descriptionMobile">Webs modernas, automatización y consultoría para crecer. Digitalizamos tu operación, conectamos tus sistemas y te ayudamos a tomar decisiones con datos. Todo adaptado a tu realidad.</p>
+            <a href="#contacto" class="cta-button" data-i18n="hero.ctaMobile">Agenda tu Consulta</a>
+        </div>
+    </section>
+
+    <section class="section reveal" id="servicios">
+        <h2 data-i18n="services.title">Nuestros Servicios</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-globe"></i>
+                <h3 data-i18n="services.webCreation.title">Creación de Páginas Web</h3>
+                <p data-i18n="services.webCreation.description">Diseñamos sitios web rápidos, modernos y optimizados para captar clientes, con enfoque en conversión, SEO y usabilidad en múltiples dispositivos.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-project-diagram"></i>
+                <h3 data-i18n="services.projectManagement.title">Gestión de Proyectos Digitales</h3>
+                <p data-i18n="services.projectManagement.description">Planificamos y ejecutamos proyectos digitales de principio a fin, aplicando metodologías ágiles para garantizar velocidad, calidad y adaptación continua a tus necesidades.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h3 data-i18n="services.softwareDevelopment.title">Desarrollo de Software Empresarial</h3>
+                <p data-i18n="services.softwareDevelopment.description">Diseñamos soluciones de software personalizadas que se integran con tus sistemas existentes, mejoran la eficiencia operativa y escalan junto con tu negocio.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-robot"></i>
+                <h3 data-i18n="services.automation.title">Automatización con IA</h3>
+                <p data-i18n="services.automation.description">Implementamos agentes inteligentes para automatizar procesos repetitivos, generar análisis avanzados y apoyar decisiones críticas en tiempo real.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-consulting"></i>
+                <h3 data-i18n="services.consulting.title">Consultoría Estratégica en TI</h3>
+                <p data-i18n="services.consulting.description">Te acompañamos en la toma de decisiones tecnológicas clave, con una visión estratégica basada en experiencia en TI, iGaming y Retail internacional.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal" id="como-trabajamos">
+        <h2 data-i18n="howWeWork.title">¿Cómo Trabajamos?</h2>
+        <div class="work-grid">
+            <div class="step">
+                <h3 data-i18n="howWeWork.step1.title">1 Diagnóstico</h3>
+                <p data-i18n="howWeWork.step1.description">Nos sumergimos en tu realidad operativa para entender necesidades reales, identificar obstáculos y definir prioridades digitales.</p>
+            </div>
+            <div class="step">
+                <h3 data-i18n="howWeWork.step2.title">2 Propuesta personalizada</h3>
+                <p data-i18n="howWeWork.step2.description">Diseñamos una estrategia a medida con roadmap, tecnología adecuada y estimación de impacto, pensada para tus objetivos.</p>
+            </div>
+            <div class="step">
+                <h3 data-i18n="howWeWork.step3.title">3 Desarrollo e implementación</h3>
+                <p data-i18n="howWeWork.step3.description">Desarrollamos soluciones listas para usar, escalables y alineadas con lo validado en la fase de propuesta.</p>
+            </div>
+            <div class="step">
+                <h3 data-i18n="howWeWork.step4.title">4 Soporte y mejora continua</h3>
+                <p data-i18n="howWeWork.step4.description">No te dejamos solo tras la entrega: te ayudamos a medir, mejorar e innovar sobre lo implementado.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal" id="paquetes">
+        <h2 data-i18n="packages.title">Paquetes de Servicios</h2>
+        <div class="packages-grid">
+            <div class="package-card">
+                <h3 data-i18n="packages.onlinePresence.title">Presencia Online</h3>
+                <p data-i18n="packages.onlinePresence.description">Objetivo: Establecer una presencia digital efectiva a través de un sitio web moderno y optimizado. Incluye el diseño de una web responsiva, integración con redes sociales, y visibilidad local mediante Google My Business.</p>
+            </div>
+            <div class="package-card">
+                <h3 data-i18n="packages.automation.title">Automatización de Procesos</h3>
+                <p data-i18n="packages.automation.description">Objetivo: Optimizar tareas internas y flujos operativos. Implementamos herramientas de automatización, conectamos sistemas con tu CRM y capacitamos a tu equipo para aprovechar las soluciones.</p>
+            </div>
+            <div class="package-card">
+                <h3 data-i18n="packages.businessIntelligence.title">Inteligencia Empresarial</h3>
+                <p data-i18n="packages.businessIntelligence.description">Objetivo: Tomar decisiones más acertadas con ayuda de datos. Creamos dashboards personalizados, integramos herramientas de análisis y te guiamos en la lectura e interpretación de resultados.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal" id="sobre-mi">
+        <h2 data-i18n="about.title">¿Quién está detrás de MarinTech?</h2>
+        <div class="about-content">
+            <div class="profile">
+                <h3 data-i18n="about.name">Rubén Marín</h3>
+                <p data-i18n="about.description">Ingeniero en Sistemas con más de 16 años de experiencia liderando soluciones tecnológicas en empresas como BestSecret, Trivago y NetEnt.</p>
+            </div>
+            <div class="about-details">
+                <div class="detail">
+                    <h4 data-i18n="about.experience.title">Experiencia Corporativa</h4>
+                    <p data-i18n="about.experience.description">Automatización de procesos, integración de plataformas y desarrollo de productos digitales complejos.</p>
+                </div>
+                <div class="detail">
+                    <h4 data-i18n="about.projects.title">Proyectos Accesibles</h4>
+                    <p data-i18n="about.projects.description">Desarrollo de sitios web y tiendas online para emprendedores y pequeños negocios.</p>
+                </div>
+                <div class="detail">
+                    <h4 data-i18n="about.focus.title">Enfoque Actual</h4>
+                    <p data-i18n="about.focus.description">Uso de IA, GPTs y automatización inteligente para digitalizar procesos sin fricción.</p>
+                </div>
+            </div>
+        </div>
+        <p class="approach" data-i18n="about.approach">“Mi enfoque es simple: entender tus necesidades, diseñar soluciones reales y ayudarte a implementarlas de forma ágil y clara.”</p>
+    </section>
+
+    <section class="section dark-bg reveal" id="contacto">
+        <h2 data-i18n="contact.title">¿Listo para impulsar tu negocio?</h2>
+        <p data-i18n="contact.description">Contáctanos hoy mismo para una consulta gratuita y descubre cómo podemos ayudarte a alcanzar tus objetivos.</p>
+        <a href="#contact-form" class="cta-button" data-i18n="contact.cta">Solicitar consulta gratuita</a>
+
+        <div id="contact-form">
+            <h3 data-i18n="form.title">Solicita tu consulta gratuita</h3>
+            <p data-i18n="form.description">Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+            <form id="consulta-form">
+                <label for="tema" data-i18n="form.label">Selecciona el tema de interés</label>
+                <select id="tema" name="tema" aria-labelledby="tema-label">
+                    <option value="presencia-online" data-i18n="form.options.onlinePresence">Presencia Online</option>
+                    <option value="automatizacion" data-i18n="form.options.automation">Automatización</option>
+                    <option value="inteligencia-empresarial" data-i18n="form.options.businessIntelligence">Inteligencia Empresarial</option>
+                    <option value="otro" data-i18n="form.options.other">Otro</option>
+                </select>
+                <button type="submit" data-i18n="form.submit">Enviar solicitud</button>
+            </form>
+            <div id="formSuccess" style="display: none;">
+                <p data-i18n="form.success.message">¡Gracias! Te responderemos en las próximas 24 horas.</p>
+                <p data-i18n="form.success.schedule">¿Quieres agendar tu cita ahora? <a href="#" data-i18n="form.success.scheduleLink">Agenda tu cita</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4 data-i18n="footer.brand">MarinTech</h4>
+                <p data-i18n="footer.tagline">Soluciones digitales profesionales para tu negocio.</p>
+            </div>
+            <div class="footer-column">
+                <h4 data-i18n="footer.links.title">Enlaces</h4>
+                <ul>
+                    <li><a href="#inicio" data-i18n="nav.inicio">Inicio</a></li>
+                    <li><a href="#servicios" data-i18n="nav.servicios">Servicios</a></li>
+                    <li><a href="#como-trabajamos" data-i18n="nav.comoTrabajamos">Cómo Trabajamos</a></li>
+                    <li><a href="#sobre-mi" data-i18n="nav.sobreMi">Sobre Mí</a></li>
+                    <li><a href="#paquetes" data-i18n="nav.paquetes">Paquetes</a></li>
+                    <li><a href="#contacto" data-i18n="nav.contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 data-i18n="footer.contact.title">Contacto</h4>
+                <p><a href="mailto:contacto@marintech.com">contacto@marintech.com</a></p>
+                <p>+58 412 3456789</p>
+                <p data-i18n="footer.contact.location">Düsseldorf, Alemania</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2025 MarinTech Consulting. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation toggle
+        document.querySelector('.nav-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Form submission
+        document.querySelector('#consulta-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.querySelector('#consulta-form').style.display = 'none';
+            document.querySelector('#formSuccess').style.display = 'block';
+        });
+
+        // Reveal animations on scroll
+        window.addEventListener('scroll', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(reveal => {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveal.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    reveal.classList.add('reveal-visible');
+                }
+            });
+        });
+
+        // Translation with i18next (inline for simplicity)
+        i18next.init({
+            lng: 'es',
+            fallbackLng: 'es',
+            resources: {
+                es: {
+                    translation: {
+                        "nav.inicio": "Inicio",
+                        "nav.servicios": "Servicios",
+                        "nav.comoTrabajamos": "Cómo Trabajamos",
+                        "nav.paquetes": "Paquetes",
+                        "nav.sobreMi": "Sobre Mí",
+                        "nav.contacto": "Contacto",
+                        "hero.title": "Soluciones Tecnológicas Innovadoras",
+                        "hero.description": "Ofrecemos soluciones prácticas para negocios que buscan crecer a través de la tecnología. Desde el desarrollo de páginas web modernas, hasta automatización con inteligencia artificial, dashboards y consultoría en TI, te ayudamos a implementar lo que realmente hace la diferencia.",
+                        "hero.descriptionMobile": "Webs modernas, automatización y consultoría para crecer. Digitalizamos tu operación, conectamos tus sistemas y te ayudamos a tomar decisiones con datos. Todo adaptado a tu realidad.",
+                        "hero.cta": "Solicita una Consulta",
+                        "hero.ctaMobile": "Agenda tu Consulta",
+                        "services.title": "Nuestros Servicios",
+                        "services.webCreation.title": "Creación de Páginas Web",
+                        "services.webCreation.description": "Diseñamos sitios web rápidos, modernos y optimizados para captar clientes, con enfoque en conversión, SEO y usabilidad en múltiples dispositivos.",
+                        "services.projectManagement.title": "Gestión de Proyectos Digitales",
+                        "services.projectManagement.description": "Planificamos y ejecutamos proyectos digitales de principio a fin, aplicando metodologías ágiles para garantizar velocidad, calidad y adaptación continua a tus necesidades.",
+                        "services.softwareDevelopment.title": "Desarrollo de Software Empresarial",
+                        "services.softwareDevelopment.description": "Diseñamos soluciones de software personalizadas que se integran con tus sistemas existentes, mejoran la eficiencia operativa y escalan junto con tu negocio.",
+                        "services.automation.title": "Automatización con IA",
+                        "services.automation.description": "Implementamos agentes inteligentes para automatizar procesos repetitivos, generar análisis avanzados y apoyar decisiones críticas en tiempo real.",
+                        "services.consulting.title": "Consultoría Estratégica en TI",
+                        "services.consulting.description": "Te acompañamos en la toma de decisiones tecnológicas clave, con una visión estratégica basada en experiencia en TI, iGaming y Retail internacional.",
+                        "howWeWork.title": "¿Cómo Trabajamos?",
+                        "howWeWork.step1.title": "1 Diagnóstico",
+                        "howWeWork.step1.description": "Nos sumergimos en tu realidad operativa para entender necesidades reales, identificar obstáculos y definir prioridades digitales.",
+                        "howWeWork.step2.title": "2 Propuesta personalizada",
+                        "howWeWork.step2.description": "Diseñamos una estrategia a medida con roadmap, tecnología adecuada y estimación de impacto, pensada para tus objetivos.",
+                        "howWeWork.step3.title": "3 Desarrollo e implementación",
+                        "howWeWork.step3.description": "Desarrollamos soluciones listas para usar, escalables y alineadas con lo validado en la fase de propuesta.",
+                        "howWeWork.step4.title": "4 Soporte y mejora continua",
+                        "howWeWork.step4.description": "No te dejamos solo tras la entrega: te ayudamos a medir, mejorar e innovar sobre lo implementado.",
+                        "packages.title": "Paquetes de Servicios",
+                        "packages.onlinePresence.title": "Presencia Online",
+                        "packages.onlinePresence.description": "Objetivo: Establecer una presencia digital efectiva a través de un sitio web moderno y optimizado. Incluye el diseño de una web responsiva, integración con redes sociales, y visibilidad local mediante Google My Business.",
+                        "packages.automation.title": "Automatización de Procesos",
+                        "packages.automation.description": "Objetivo: Optimizar tareas internas y flujos operativos. Implementamos herramientas de automatización, conectamos sistemas con tu CRM y capacitamos a tu equipo para aprovechar las soluciones.",
+                        "packages.businessIntelligence.title": "Inteligencia Empresarial",
+                        "packages.businessIntelligence.description": "Objetivo: Tomar decisiones más acertadas con ayuda de datos. Creamos dashboards personalizados, integramos herramientas de análisis y te guiamos en la lectura e interpretación de resultados.",
+                        "about.title": "¿Quién está detrás de MarinTech?",
+                        "about.name": "Rubén Marín",
+                        "about.description": "Ingeniero en Sistemas con más de 16 años de experiencia liderando soluciones tecnológicas en empresas como BestSecret, Trivago y NetEnt.",
+                        "about.experience.title": "Experiencia Corporativa",
+                        "about.experience.description": "Automatización de procesos, integración de plataformas y desarrollo de productos digitales complejos.",
+                        "about.projects.title": "Proyectos Accesibles",
+                        "about.projects.description": "Desarrollo de sitios web y tiendas online para emprendedores y pequeños negocios.",
+                        "about.focus.title": "Enfoque Actual",
+                        "about.focus.description": "Uso de IA, GPTs y automatización inteligente para digitalizar procesos sin fricción.",
+                        "about.approach": "“Mi enfoque es simple: entender tus necesidades, diseñar soluciones reales y ayudarte a implementarlas de forma ágil y clara.”",
+                        "contact.title": "¿Listo para impulsar tu negocio?",
+                        "contact.description": "Contáctanos hoy mismo para una consulta gratuita y descubre cómo podemos ayudarte a alcanzar tus objetivos.",
+                        "contact.cta": "Solicitar consulta gratuita",
+                        "form.title": "Solicita tu consulta gratuita",
+                        "form.description": "Completa el formulario y nos pondremos en contacto contigo lo antes posible.",
+                        "form.label": "Selecciona el tema de interés",
+                        "form.options.onlinePresence": "Presencia Online",
+                        "form.options.automation": "Automatización",
+                        "form.options.businessIntelligence": "Inteligencia Empresarial",
+                        "form.options.other": "Otro",
+                        "form.submit": "Enviar solicitud",
+                        "form.success.message": "¡Gracias! Te responderemos en las próximas 24 horas.",
+                        "form.success.schedule": "¿Quieres agendar tu cita ahora?",
+                        "form.success.scheduleLink": "Agenda tu cita",
+                        "footer.brand": "MarinTech",
+                        "footer.tagline": "Soluciones digitales profesionales para tu negocio.",
+                        "footer.links.title": "Enlaces",
+                        "footer.contact.title": "Contacto",
+                        "footer.contact.location": "Düsseldorf, Alemania",
+                        "footer.copyright": "© 2025 MarinTech Consulting. Todos los derechos reservados."
+                    }
+                },
+                en: {
+                    translation: {
+                        "nav.inicio": "Home",
+                        "nav.servicios": "Services",
+                        "nav.comoTrabajamos": "How We Work",
+                        "nav.paquetes": "Packages",
+                        "nav.sobreMi": "About Me",
+                        "nav.contacto": "Contact",
+                        "hero.title": "Innovative Technological Solutions",
+                        "hero.description": "We offer practical solutions for businesses looking to grow through technology. From developing modern websites to automation with artificial intelligence, dashboards, and IT consulting, we help you implement what truly makes a difference.",
+                        "hero.descriptionMobile": "Modern websites, automation, and consulting to grow. We digitize your operations, connect your systems, and help you make data-driven decisions. All tailored to your reality.",
+                        "hero.cta": "Request a Consultation",
+                        "hero.ctaMobile": "Schedule Your Consultation",
+                        "services.title": "Our Services",
+                        "services.webCreation.title": "Website Creation",
+                        "services.webCreation.description": "We design fast, modern, and optimized websites to attract clients, focusing on conversion, SEO, and usability across multiple devices.",
+                        "services.projectManagement.title": "Digital Project Management",
+                        "services.projectManagement.description": "We plan and execute digital projects from start to finish, using agile methodologies to ensure speed, quality, and continuous adaptation to your needs.",
+                        "services.softwareDevelopment.title": "Enterprise Software Development",
+                        "services.softwareDevelopment.description": "We design customized software solutions that integrate with your existing systems, improve operational efficiency, and scale with your business.",
+                        "services.automation.title": "Automation with AI",
+                        "services.automation.description": "We implement intelligent agents to automate repetitive processes, generate advanced analytics, and support critical decisions in real time.",
+                        "services.consulting.title": "Strategic IT Consulting",
+                        "services.consulting.description": "We guide you in making key technological decisions, with a strategic vision based on experience in IT, iGaming, and international Retail.",
+                        "howWeWork.title": "How We Work",
+                        "howWeWork.step1.title": "1 Diagnosis",
+                        "howWeWork.step1.description": "We dive into your operational reality to understand real needs, identify obstacles, and define digital priorities.",
+                        "howWeWork.step2.title": "2 Personalized Proposal",
+                        "howWeWork.step2.description": "We design a tailored strategy with a roadmap, appropriate technology, and impact estimation, focused on your goals.",
+                        "howWeWork.step3.title": "3 Development and Implementation",
+                        "howWeWork.step3.description": "We develop ready-to-use, scalable solutions aligned with what was validated in the proposal phase.",
+                        "howWeWork.step4.title": "4 Support and Continuous Improvement",
+                        "howWeWork.step4.description": "We don’t leave you alone after delivery: we help you measure, improve, and innovate on what’s implemented.",
+                        "packages.title": "Service Packages",
+                        "packages.onlinePresence.title": "Online Presence",
+                        "packages.onlinePresence.description": "Objective: Establish an effective digital presence through a modern, optimized website. Includes responsive web design, social media integration, and local visibility via Google My Business.",
+                        "packages.automation.title": "Process Automation",
+                        "packages.automation.description": "Objective: Optimize internal tasks and operational workflows. We implement automation tools, connect systems with your CRM, and train your team to leverage the solutions.",
+                        "packages.businessIntelligence.title": "Business Intelligence",
+                        "packages.businessIntelligence.description": "Objective: Make better decisions with data. We create personalized dashboards, integrate analytics tools, and guide you in interpreting results.",
+                        "about.title": "Who’s Behind MarinTech?",
+                        "about.name": "Rubén Marín",
+                        "about.description": "Systems Engineer with over 16 years of experience leading technological solutions at companies like BestSecret, Trivago, and NetEnt.",
+                        "about.experience.title": "Corporate Experience",
+                        "about.experience.description": "Automation of processes, platform integration, and development of complex digital products.",
+                        "about.projects.title": "Accessible Projects",
+                        "about.projects.description": "Development of websites and online stores for entrepreneurs and small businesses.",
+                        "about.focus.title": "Current Focus",
+                        "about.focus.description": "Use of AI, GPTs, and intelligent automation to digitize processes seamlessly.",
+                        "about.approach": "“My approach is simple: understand your needs, design real solutions, and help you implement them in an agile and clear way.”",
+                        "contact.title": "Ready to Boost Your Business?",
+                        "contact.description": "Contact us today for a free consultation and discover how we can help you achieve your goals.",
+                        "contact.cta": "Request a Free Consultation",
+                        "form.title": "Request Your Free Consultation",
+                        "form.description": "Fill out the form, and we’ll get in touch with you as soon as possible.",
+                        "form.label": "Select the topic of interest",
+                        "form.options.onlinePresence": "Online Presence",
+                        "form.options.automation": "Automation",
+                        "form.options.businessIntelligence": "Business Intelligence",
+                        "form.options.other": "Other",
+                        "form.submit": "Submit Request",
+                        "form.success.message": "Thank you! We’ll respond within the next 24 hours.",
+                        "form.success.schedule": "Want to schedule your appointment now?",
+                        "form.success.scheduleLink": "Schedule Your Appointment",
+                        "footer.brand": "MarinTech",
+                        "footer.tagline": "Professional digital solutions for your business.",
+                        "footer.links.title": "Links",
+                        "footer.contact.title": "Contact",
+                        "footer.contact.location": "Düsseldorf, Germany",
+                        "footer.copyright": "© 2025 MarinTech Consulting. All rights reserved."
+                    }
+                },
+                de: {
+                    translation: {
+                        "nav.inicio": "Startseite",
+                        "nav.servicios": "Dienstleistungen",
+                        "nav.comoTrabajamos": "Wie wir arbeiten",
+                        "nav.paquetes": "Pakete",
+                        "nav.sobreMi": "Über mich",
+                        "nav.contacto": "Kontakt",
+                        "hero.title": "Innovative Technologische Lösungen",
+                        "hero.description": "Wir bieten praktische Lösungen für Unternehmen, die durch Technologie wachsen möchten. Von der Entwicklung moderner Websites bis hin zur Automatisierung mit künstlicher Intelligenz, Dashboards und IT-Beratung helfen wir Ihnen, das umzusetzen, was wirklich einen Unterschied macht.",
+                        "hero.descriptionMobile": "Moderne Websites, Automatisierung und Beratung zum Wachsen. Wir digitalisieren Ihre Abläufe, verbinden Ihre Systeme und helfen Ihnen, datenbasierte Entscheidungen zu treffen. Alles an Ihre Realität angepasst.",
+                        "hero.cta": "Beratung anfordern",
+                        "hero.ctaMobile": "Ihre Beratung vereinbaren",
+                        "services.title": "Unsere Dienstleistungen",
+                        "services.webCreation.title": "Erstellung von Websites",
+                        "services.webCreation.description": "Wir gestalten schnelle, moderne und optimierte Websites, um Kunden zu gewinnen, mit Fokus auf Conversion, SEO und Benutzerfreundlichkeit auf verschiedenen Geräten.",
+                        "services.projectManagement.title": "Digitales Projektmanagement",
+                        "services.projectManagement.description": "Wir planen und führen digitale Projekte von Anfang bis Ende durch und wenden agile Methoden an, um Geschwindigkeit, Qualität und kontinuierliche Anpassung an Ihre Bedürfnisse zu gewährleisten.",
+                        "services.softwareDevelopment.title": "Unternehmenssoftwareentwicklung",
+                        "services.softwareDevelopment.description": "Wir entwickeln maßgeschneiderte Softwarelösungen, die sich in Ihre bestehenden Systeme integrieren, die betriebliche Effizienz verbessern und mit Ihrem Unternehmen wachsen.",
+                        "services.automation.title": "Automatisierung mit KI",
+                        "services.automation.description": "Wir implementieren intelligente Agenten, um wiederkehrende Prozesse zu automatisieren, fortgeschrittene Analysen zu erstellen und Echtzeitentscheidungen zu unterstützen.",
+                        "services.consulting.title": "Strategische IT-Beratung",
+                        "services.consulting.description": "Wir begleiten Sie bei wichtigen technologischen Entscheidungen mit einer strategischen Vision, die auf Erfahrung in IT, iGaming und internationalem Einzelhandel basiert.",
+                        "howWeWork.title": "Wie wir arbeiten",
+                        "howWeWork.step1.title": "1 Diagnose",
+                        "howWeWork.step1.description": "Wir tauchen in Ihre betriebliche Realität ein, um echte Bedürfnisse zu verstehen, Hindernisse zu identifizieren und digitale Prioritäten zu definieren.",
+                        "howWeWork.step2.title": "2 Individuelles Angebot",
+                        "howWeWork.step2.description": "Wir erstellen eine maßgeschneiderte Strategie mit Roadmap, geeigneter Technologie und Wirkungseinschätzung, die auf Ihre Ziele ausgerichtet ist.",
+                        "howWeWork.step3.title": "3 Entwicklung und Implementierung",
+                        "howWeWork.step3.description": "Wir entwickeln einsatzbereite, skalierbare Lösungen, die mit der validierten Angebots-phase abgestimmt sind.",
+                        "howWeWork.step4.title": "4 Unterstützung und kontinuierliche Verbesserung",
+                        "howWeWork.step4.description": "Wir lassen Sie nach der Lieferung nicht allein: Wir helfen Ihnen, zu messen, zu verbessern und über das Implementierte hinaus zu innovieren.",
+                        "packages.title": "Dienstleistungspakete",
+                        "packages.onlinePresence.title": "Online-Präsenz",
+                        "packages.onlinePresence.description": "Ziel: Eine effektive digitale Präsenz durch eine moderne, optimierte Website schaffen. Umfasst responsives Webdesign, Integration mit sozialen Medien und lokale Sichtbarkeit über Google My Business.",
+                        "packages.automation.title": "Prozessautomatisierung",
+                        "packages.automation.description": "Ziel: Interne Aufgaben und operative Abläufe optimieren. Wir implementieren Automatisierungstools, verbinden Systeme mit Ihrem CRM und schulen Ihr Team, um die Lösungen zu nutzen.",
+                        "packages.businessIntelligence.title": "Business Intelligence",
+                        "packages.businessIntelligence.description": "Ziel: Bessere Entscheidungen mit Daten treffen. Wir erstellen personalisierte Dashboards, integrieren Analysetools und führen Sie bei der Interpretation von Ergebnissen.",
+                        "about.title": "Wer steht hinter MarinTech?",
+                        "about.name": "Rubén Marín",
+                        "about.description": "Systemingenieur mit über 16 Jahren Erfahrung in der Leitung technologischer Lösungen bei Unternehmen wie BestSecret, Trivago und NetEnt.",
+                        "about.experience.title": "Unternehmenserfahrung",
+                        "about.experience.description": "Automatisierung von Prozessen, Plattformintegration und Entwicklung komplexer digitaler Produkte.",
+                        "about.projects.title": "Zugängliche Projekte",
+                        "about.projects.description": "Entwicklung von Websites und Online-Shops für Unternehmer und kleine Unternehmen.",
+                        "about.focus.title": "Aktueller Fokus",
+                        "about.focus.description": "Nutzung von KI, GPTs und intelligenter Automatisierung zur reibungslosen Digitalisierung von Prozessen.",
+                        "about.approach": "“Mein Ansatz ist einfach: Ihre Bedürfnisse verstehen, echte Lösungen entwerfen und Ihnen helfen, diese agil und klar umzusetzen.”",
+                        "contact.title": "Bereit, Ihr Unternehmen voranzubringen?",
+                        "contact.description": "Kontaktieren Sie uns noch heute für eine kostenlose Beratung und erfahren Sie, wie wir Ihnen helfen können, Ihre Ziele zu erreichen.",
+                        "contact.cta": "Kostenlose Beratung anfordern",
+                        "form.title": "Fordern Sie Ihre kostenlose Beratung an",
+                        "form.description": "Füllen Sie das Formular aus, und wir werden uns so schnell wie möglich mit Ihnen in Verbindung setzen.",
+                        "form.label": "Wählen Sie das Thema aus",
+                        "form.options.onlinePresence": "Online-Präsenz",
+                        "form.options.automation": "Automatisierung",
+                        "form.options.businessIntelligence": "Business Intelligence",
+                        "form.options.other": "Andere",
+                        "form.submit": "Anfrage senden",
+                        "form.success.message": "Vielen Dank! Wir werden innerhalb der nächsten 24 Stunden antworten.",
+                        "form.success.schedule": "Möchten Sie jetzt Ihren Termin vereinbaren?",
+                        "form.success.scheduleLink": "Termin vereinbaren",
+                        "footer.brand": "MarinTech",
+                        "footer.tagline": "Professionelle digitale Lösungen für Ihr Unternehmen.",
+                        "footer.links.title": "Links",
+                        "footer.contact.title": "Kontakt",
+                        "footer.contact.location": "Düsseldorf, Deutschland",
+                        "footer.copyright": "© 2025 MarinTech Consulting. Alle Rechte vorbehalten."
+                    }
+                }
+            }
+        }, function(err, t) {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                el.innerHTML = t(el.getAttribute('data-i18n'));
+            });
+            document.querySelectorAll('.lang-switch').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const lng = link.getAttribute('data-lang');
+                    i18next.changeLanguage(lng, () => {
+                        document.querySelectorAll('[data-i18n]').forEach(el => {
+                            el.innerHTML = t(el.getAttribute('data-i18n'));
+                        });
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
