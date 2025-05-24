@@ -33,7 +33,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 70px;
+  padding: 40px 90px;
   background-color: var(--background-color);
   position: fixed;
   width: 100%;
@@ -43,7 +43,7 @@ body {
 }
 
 .logo {
-  font-size: 60px;
+  font-size: 80px;
   font-weight: 800;
   color: var(--primary-color);
 }
