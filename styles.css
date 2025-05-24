@@ -43,8 +43,8 @@ body {
 }
 
 .logo {
-  font-size: 40px;
-  font-weight: 700;
+  font-size: 60px;
+  font-weight: 800;
   color: var(--primary-color);
 }
 
@@ -734,6 +734,9 @@ body {
     font-size: 12px;
     margin-top: 5px;
     color: #333;
+  }
+    .logo {
+    font-size: 24px;
   }
 }
 
