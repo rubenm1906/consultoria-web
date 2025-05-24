@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Talyx Consulting</title>
+<link href="styles_talyx_fixed_layout.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<style>
+    .service-card h3 span {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-color: var(--secondary-color);
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 50%;
+      margin-right: 10px;
+      line-height: 30px;
+    }
+  </style>
+<style>
+    html, body {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+<!-- Navegación -->
+<header>
+<nav class="navbar">
+  <a href="#contact" class="contact-btn">Contáctanos</a>
+<div class="logo">Talyx</div>
+<button class="nav-toggle" onclick="toggleMenu()">
+<i class="fas fa-bars"></i>
+</button>
+<ul class="nav-links">
+<li><a href="#home">Inicio</a></li>
+<li><a href="#services">Servicios</a></li>
+<li><a href="#workflow">Cómo Trabajamos</a></li>
+<li><a href="#packages">Paquetes</a></li>
+<li><a href="#about">Nosotros</a></li>
+<li><a href="#contact">Contacto</a></li>
+</ul>
+    <a href="#contact" class="contact-btn">Contáctanos</a>
+    <a href="#contact" class="contact-btn">Contáctanos</a>
+</nav>
+</header>
+<!-- Hero -->
+<!-- Hero Desktop -->
+
+<section class="hero desktop-hero" id="home">
+  <div class="hero-content" style="text-align: center; max-width: 900px; margin: 0 auto; padding: 0 20px;">
+    <h1 style="font-size: 56px; margin-bottom: 25px; font-weight: 700; color: #fff; line-height: 1.2;">Impulsamos tu evolución digital</h1>
+    <p style="font-size: 18px; line-height: 1.7; color: #f0f0f0; max-width: 800px; margin: 0 auto 30px;">
+      Conectamos estrategia, tecnología y automatización para transformar tu negocio. Creamos soluciones digitales a medida que optimizan procesos, elevan la experiencia del cliente y habilitan decisiones inteligentes basadas en datos.
+    </p>
+    <a class="cta-button" href="#contact">Solicita una consulta</a>
+  </div>
+</section>
+
+<!-- Hero Mobile -->
+
+<section class="hero mobile-hero" id="home">
+  <div class="hero-content">
+    <h1>Impulsamos tu evolución digital</h1>
+    <p>Conectamos estrategia, tecnología y automatización para transformar tu negocio. Creamos soluciones digitales a medida que optimizan procesos, elevan la experiencia del cliente y habilitan decisiones inteligentes basadas en datos.</p>
+    <a class="cta-button" href="#contact">Solicita una consulta</a>
+  </div>
+</section>
+
+<!-- Servicios -->
+
+<section class="section" id="services">
+<h2>Servicios que transforman tu operación</h2>
+<div class="services-grid">
+  <div class="service-card">
+    <i class="fas fa-globe"></i>
+    <h3>Creación de Páginas Web</h3>
+    <p>Diseñamos experiencias web modernas, responsivas y orientadas a conversión. Sitios preparados para escalar, optimizados para SEO y conectados con herramientas clave del negocio.</p>
+  </div>
+  <div class="service-card">
+    <i class="fas fa-project-diagram"></i>
+    <h3>Gestión de Proyectos Digitales</h3>
+    <p>Lideramos iniciativas digitales end-to-end aplicando metodologías ágiles. Alineamos visión estratégica y ejecución técnica para acelerar resultados y reducir riesgos.</p>
+  </div>
+  <div class="service-card">
+    <i class="fas fa-laptop-code"></i>
+    <h3>Desarrollo de Software Empresarial</h3>
+    <p>Creamos soluciones tecnológicas a medida que se integran con tus sistemas existentes, aumentan la eficiencia y se adaptan a la evolución de tu negocio.</p>
+  </div>
+  <div class="service-card">
+    <i class="fas fa-brain"></i>
+    <h3>Automatización con Inteligencia Artificial</h3>
+    <p>Implementamos procesos inteligentes que automatizan tareas repetitivas, mejoran la toma de decisiones y liberan tiempo para lo estratégico.</p>
+  </div>
+  <div class="service-card">
+    <i class="fas fa-chalkboard-teacher"></i>
+    <h3>Consultoría Estratégica en Tecnología</h3>
+    <p>Acompañamos tu transformación digital con una visión integral: estrategia, tecnología y ejecución. Te ayudamos a tomar decisiones con impacto.</p>
+  </div>
+
+  <div class="service-card">
+    <i class="fas fa-user-gear"></i>
+    <h3>Escala tu Marca Personal</h3>
+    <p>Si ya vendes desde Instagram o WhatsApp, pero sientes que te faltan herramientas, este servicio es para ti. Creamos tu página enfocada en captación, diseñamos embudos, automatizamos mensajes y te ayudamos a transformar tu audiencia en ingresos reales.</p>
+  </div>
+
+</div>
+</section>
+
+<!-- Cómo trabajamos -->
+
+<section class="section dark-bg" id="workflow" style="color: #222;">
+<h2><span style="color: white;">Cómo llevamos tu visión digital a la realidad</span></h2>
+<div class="services-grid">
+  <div class="service-card">
+    <h3><span>1</span> Diagnóstico profundo</h3>
+    <p>Nos sumergimos en tu contexto operativo para identificar oportunidades y definir juntos el norte digital de tu negocio.</p>
+  </div>
+  <div class="service-card">
+    <h3><span>2</span> Propuesta personalizada</h3>
+    <p>Diseñamos una solución concreta, con roadmap, tecnologías recomendadas y estimación de impacto alineada a tus objetivos.</p>
+  </div>
+  <div class="service-card">
+    <h3><span>3</span> Ejecución colaborativa</h3>
+    <p>Desarrollamos soluciones en ciclos cortos, con validación continua y entregas funcionales que generan valor desde el inicio.</p>
+  </div>
+  <div class="service-card">
+    <h3><span>4</span> Mejora continua</h3>
+    <p>No termina con la entrega. Medimos, iteramos y evolucionamos contigo para garantizar impacto sostenible.</p>
+  </div>
+</div>
+</section>
+
+<!-- Paquetes -->
+
+<section class="section" id="packages">
+<h2>Soluciones adaptadas a tu etapa de madurez digital</h2>
+<div class="services-grid">
+  <div class="service-card">
+    <i class="fas fa-bullhorn"></i>
+    <h3 style="margin-top: 10px; color: var(--secondary-color);">Presencia Online</h3>
+    <p><strong>Potencia tu visibilidad digital</strong> con un sitio moderno, rápido y optimizado. Incluye diseño responsivo, integración con redes sociales y Google My Business.</p>
+  </div>
+  <div class="service-card">
+    <i class="fas fa-cogs"></i>
+    <h3 style="margin-top: 10px; color: var(--secondary-color);">Automatización de Procesos</h3>
+    <p><strong>Digitaliza tareas clave</strong>, conecta plataformas y reduce fricción operativa. Te ayudamos a ahorrar tiempo y mejorar la experiencia del cliente.</p>
+  </div>
+  <div class="service-card">
+    <i class="fas fa-chart-line"></i>
+    <h3 style="margin-top: 10px; color: var(--secondary-color);">Inteligencia Empresarial</h3>
+    <p><strong>Convierte tus datos en decisiones.</strong> Creamos dashboards, integramos fuentes y te entrenamos para interpretar insights accionables.</p>
+  </div>
+  <div class="service-card">
+    <i class="fas fa-bullseye"></i>
+    <h3 style="margin-top: 10px; color: var(--secondary-color);">Marca Personal Escalable</h3>
+    <p><strong>Convierte tu contenido en ventas.</strong> Paquete diseñado para coaches, creadores, asesores y freelancers que ya operan en redes. Incluye landing page optimizada, chatbot, embudo automatizado y asesoría en contenidos.</p>
+  </div>
+
+</div>
+</section>
+
+
+<!-- Sección Nosotros -->
+<section class="section" id="about" style="background-color: #f9f9f9; padding: 100px 20px; text-align: center;">
+<div style="max-width: 1000px; margin: 0 auto;">
+<h2 style="font-size: 38px; font-weight: 800; color: var(--primary-color); margin-bottom: 10px;">Aceleramos tu transformación digital con propósito</h2>
+<div style="width: 80px; height: 4px; background-color: var(--secondary-color); margin: 10px auto 40px; border-radius: 2px;"></div>
+<p style="font-size: 17px; line-height: 1.6; color: #333; margin-bottom: 50px;">
+  En Talyx Consulting creemos que la tecnología no es el fin, sino el medio. Combinamos estrategia, diseño y desarrollo para acompañarte en un proceso de evolución digital continuo, centrado en resultados de negocio reales.
+</p>
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+  <div style="flex: 1; min-width: 260px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <i class="fas fa-briefcase" style="font-size: 24px; color: var(--secondary-color); margin-bottom: 10px;"></i>
+    <h4 style="color: var(--primary-color); margin-bottom: 10px;">Estrategia con foco en impacto</h4>
+    <p style="font-size: 15px; color: #555;">Analizamos tu contexto, tus retos y tus oportunidades. Diseñamos soluciones digitales alineadas a objetivos concretos de negocio, no solo entregables técnicos.</p>
+  </div>
+  <div style="flex: 1; min-width: 260px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <i class="fas fa-code" style="font-size: 24px; color: var(--secondary-color); margin-bottom: 10px;"></i>
+    <h4 style="color: var(--primary-color); margin-bottom: 10px;">Ejecución ágil y colaborativa</h4>
+    <p style="font-size: 15px; color: #555;">Trabajamos codo a codo contigo, en ciclos iterativos. Validamos, medimos y adaptamos en cada fase. Nuestro enfoque combina velocidad, calidad y cercanía.</p>
+  </div>
+  <div style="flex: 1; min-width: 260px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <i class="fas fa-robot" style="font-size: 24px; color: var(--secondary-color); margin-bottom: 10px;"></i>
+    <h4 style="color: var(--primary-color); margin-bottom: 10px;">Tecnología como ventaja competitiva</h4>
+    <p style="font-size: 15px; color: #555;">Aplicamos inteligencia artificial, automatización e integraciones inteligentes para escalar tu operación y empoderar la toma de decisiones basada en datos.</p>
+  </div>
+</div>
+
+<div style="margin-top: 50px; background: #eef4fa; padding: 30px; border-left: 5px solid var(--secondary-color); border-radius: 10px;">
+<p style="font-size: 17px; font-style: italic; color: #333;">“No solo construimos tecnología. Creamos caminos digitales que te acercan al futuro que imaginas.”</p>
+</div>
+</div>
+</section>
+
+<!-- Contacto -->
+<section class="section dark-bg" id="contact" style="padding: 100px 20px 60px;">
+<div style="text-align: center; max-width: 800px; margin: 0 auto; padding-bottom: 40px;">
+<h2>¿Listo para impulsar tu negocio?</h2>
+<p>Contáctanos hoy mismo para una consulta gratuita y descubre cómo podemos ayudarte a alcanzar tus objetivos.</p>
+<button class="cta-button" id="openForm" style="margin-top: 20px; display: inline-block;">Solicitar consulta gratuita</button>
+<div id="contactModal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); justify-content: center; align-items: center; z-index: 1000;">
+<div style="background: white; padding: 30px; border-radius: 10px; max-width: 500px; width: 90%; position: relative;">
+<button onclick="document.getElementById('contactModal').style.display='none'" style="position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 20px; cursor: pointer;">×</button>
+<h3 style="color: var(--primary-color); font-size: 20px; font-weight: 600; margin-bottom: 5px;">Solicita tu consulta gratuita</h3>
+<p style="font-size: 14px; margin-bottom: 20px; color: #444;">Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+<form id="contactForm" style="display: flex; flex-direction: column; gap: 15px;">
+<div style="position: relative;">
+<i class="fas fa-user" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--secondary-color);"></i>
+<input name="name" placeholder="Nombre completo" required="" style="width: 100%; padding: 10px 10px 10px 35px; border-radius: 5px; border: 1px solid #ccc;" type="text"/>
+</div>
+<div style="position: relative;">
+<i class="fas fa-envelope" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--secondary-color);"></i>
+<input name="email" placeholder="Correo electrónico" required="" style="width: 100%; padding: 10px 10px 10px 35px; border-radius: 5px; border: 1px solid #ccc;" type="email"/>
+</div>
+<div style="position: relative;">
+<i class="fas fa-phone" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--secondary-color);"></i>
+<input name="phone" placeholder="Teléfono" style="width: 100%; padding: 10px 10px 10px 35px; border-radius: 5px; border: 1px solid #ccc;" type="tel"/>
+</div>
+<div style="position: relative;">
+<i class="fas fa-list" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--secondary-color);"></i>
+<select name="topic" required="" style="width: 100%; padding: 10px 10px 10px 35px; border-radius: 5px; border: 1px solid #ccc;">
+<option value="">Selecciona el tema de interés</option>
+<option value="presencia">Presencia Online</option>
+<option value="automatizacion">Automatización</option>
+<option value="inteligencia">Inteligencia Empresarial</option>
+<option value="otro">Otro</option>
+</select>
+</div>
+<div style="position: relative;">
+<i class="fas fa-comment" style="position: absolute; left: 10px; top: 10px; color: var(--secondary-color);"></i>
+<textarea name="message" placeholder="Cuéntanos sobre tu proyecto o consulta..." required="" rows="4" style="width: 100%; padding: 10px 10px 10px 35px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+</div>
+<button class="cta-button" style="width: 100%; background-color: var(--secondary-color); color: white; border: none; padding: 12px; border-radius: 5px; font-weight: 600;" type="submit">Enviar solicitud</button>
+</form>
+
+
+<div id="formSuccess" style="display: none; padding: 40px 20px; text-align: center;">
+  <div id="thankYouContent"></div>
+  <div id="thankYouContent"></div>
+  <button class="cta-button" id="popupCalendlyBtn" style="margin-top: 20px;">Agenda tu cita</button>
+  
+</div>
+
+
+<script>
+  const form = document.getElementById('contactForm');
+  const modal = document.getElementById('contactModal');
+  const success = document.getElementById('formSuccess');
+  const thankYouTitle = document.getElementById('thankYouTitle');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const name = formData.get('name');
+
+    fetch('https://formspree.io/f/xblownlg', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        form.style.display = 'none';
+        document.querySelector('#contactModal h3').style.display = 'none';
+        document.querySelector('#contactModal p').style.display = 'none';
+        thankYouTitle.textContent = `¡Gracias, ${name}! Te responderemos en las próximas 24 horas.`;
+        success.style.display = 'block';
+        form.reset();
+        modal.style.display = 'flex';
+      } else {
+        alert('Ocurrió un error. Intenta de nuevo.');
+      }
+    }).catch(error => {
+      alert('Error al enviar el formulario.');
+    });
+  });
+</script>
+
+</div>
+</div>
+<script>
+      document.getElementById('openForm').onclick = function() {
+        document.getElementById('contactModal').style.display = 'flex';
+      }
+    </script>
+</div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+<div class="footer-container">
+<div class="footer-column">
+<h4>Talyx</h4>
+<p class="tagline">Soluciones digitales profesionales para tu negocio.</p>
+</div>
+<div class="footer-column footer-links-desktop">
+<h4>Enlaces</h4>
+<ul>
+<li><a href="#home">Inicio</a></li>
+<li><a href="#services">Servicios</a></li>
+<li><a href="#workflow">Cómo Trabajamos</a></li>
+<li><a href="#about">Nosotros</a></li>
+<li><a href="#packages">Paquetes</a></li>
+<li><a href="#contact">Contacto</a></li>
+</ul>
+    <a href="#contact" class="contact-btn">Contáctanos</a>
+    <a href="#contact" class="contact-btn">Contáctanos</a>
+</div>
+<div class="footer-column">
+<h4>Contacto</h4>
+<p>contacto@talyx.com</p>
+<p>+58 412 3456789</p>
+<p>Düsseldorf, Alemania</p>
+<div class="social-icons">
+<i class="fab fa-facebook"></i>
+<i class="fab fa-linkedin"></i>
+<i class="fab fa-github"></i>
+</div>
+</div>
+</div>
+<p class="footer-bottom">© 2025 Talyx Consulting. Todos los derechos reservados.</p>
+</footer>
+<script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+
+// Cerrar menú hamburguesa al hacer clic en cualquier enlace
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.remove('active');
+  });
+});
+
+</script>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+<script>
+  function showPostSubmit() {
+    document.getElementById('formSuccess').style.display = 'block';
+    window.scrollTo({ top: document.getElementById('formSuccess').offsetTop - 60, behavior: 'smooth' });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        document.getElementById('form-modal').style.display = 'none';
+        showPostSubmit();
+      });
+    }
+  });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contactForm');
+  const modal = document.getElementById('contactModal');
+  const success = document.getElementById('formSuccess');
+  const thankYouTitle = document.getElementById('thankYouTitle');
+  const calendlyBtn = document.getElementById('showCalendlyBtn');
+  const calendlyEmbed = document.getElementById('calendlyEmbed');
+  const thankYouContent = document.getElementById('thankYouContent');
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const name = formData.get('name');
+
+      fetch('https://formspree.io/f/xblownlg', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          form.style.display = 'none';
+          const title = modal.querySelector('h3');
+          const desc = modal.querySelector('p');
+          if (title) title.style.display = 'none';
+          if (desc) desc.style.display = 'none';
+          if (thankYouTitle) thankYouTitle.textContent = `¡Gracias, ${name}! Te responderemos en las próximas 24 horas.`;
+          if (success) success.style.display = 'block';
+          modal.style.display = 'flex';
+          form.reset();
+        } else {
+          alert('Ocurrió un error. Intenta de nuevo.');
+        }
+      }).catch(error => {
+        alert('Error al enviar el formulario.');
+      });
+    });
+  }
+
+  if (calendlyBtn && calendlyEmbed && thankYouContent) {
+    calendlyBtn.addEventListener('click', () => {
+      thankYouContent.style.display = 'none';
+      calendlyEmbed.style.display = 'block';
+    });
+  }
+
+  const openBtn = document.getElementById('openForm');
+  if (openBtn && modal) {
+    openBtn.onclick = () => {
+      modal.style.display = 'flex';
+    }
+  }
+});
+</script>
+
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const calendlyBtn = document.getElementById('popupCalendlyBtn');
+    if (calendlyBtn) {
+      calendlyBtn.addEventListener('click', function () {
+        Calendly.initPopupWidget({ url: 'https://calendly.com/rubenmarin19/consultoria-estragetica' });
+        return false;
+      });
+    }
+  });
+</script>
+</body>
+</html>
+
