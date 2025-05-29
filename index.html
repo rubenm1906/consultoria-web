@@ -45,7 +45,7 @@
 <li><a href="#packages">Packages</a></li>
 <li><a href="#about">About Us</a></li>
 <li><a href="#contact">Contact</a></li>
-<li id="lang-switch">Español</li></ul>
+<li id="lang-switch">EN/ES</li></ul>
 <a class="contact-btn" href="#contact" id="openForm">Contact Us</a>
 </nav>
 </header>
@@ -55,7 +55,7 @@
 <div class="hero-content" style="text-align: center; max-width: 900px; margin: 0 auto; padding: 0 20px;">
 <h1 style="font-size: 56px; margin-bottom: 25px; font-weight: 700; color: #fff; line-height: 1.2;">We drive your digital evolution</h1>
 <p style="font-size: 18px; line-height: 1.7; color: #f0f0f0; max-width: 800px; margin: 0 auto 30px;">We connect strategy, technology, and automation to transform your business. We build tailored digital solutions that optimize processes, enhance customer experience, and enable smart, data-driven decisions.</p>
-<a class="cta-button" href="#contact">Solicita una consulta</a>
+<a class="cta-button" href="#contact">Let's Talk</a>
 </div>
 </section>
 <!-- Hero Mobile -->
@@ -63,7 +63,7 @@
 <div class="hero-content">
 <h1>We drive your digital evolution</h1>
 <p>We connect strategy, technology, and automation to transform your business. We build tailored digital solutions that optimize processes, enhance customer experience, and enable smart, data-driven decisions.</p>
-<a class="cta-button" href="#contact">Solicita una consulta</a>
+<a class="cta-button" href="#contact">Let's Talk</a>
 </div>
 </section>
 <!-- Servicios -->
@@ -174,7 +174,7 @@
 </div>
 </div>
 <div style="margin-top: 50px; background: #eef4fa; padding: 30px; border-left: 5px solid var(--secondary-color); border-radius: 10px;">
-<p style="font-size: 17px; font-style: italic; color: #333;">“No solo construimos tecnología. Creamos caminos digitales que te acercan al futuro que imaginas.”</p>
+<p style="font-size: 17px; font-style: italic; color: #333;">“We don't just build technology. We craft digital pathways that move you closer to the future you want to create.”</p>
 </div>
 </div>
 </section>
@@ -187,8 +187,8 @@
 <div id="contactModal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); justify-content: center; align-items: center; z-index: 1000;">
 <div style="background: white; padding: 30px; border-radius: 10px; max-width: 500px; width: 90%; position: relative;">
 <button onclick="document.getElementById('contactModal').style.display='none'" style="position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 20px; cursor: pointer;">×</button>
-<h3 style="color: var(--primary-color); font-size: 20px; font-weight: 600; margin-bottom: 5px;">Solicita tu consulta gratuita</h3>
-<p style="font-size: 14px; margin-bottom: 20px; color: #444;">Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+<h3 style="color: var(--primary-color); font-size: 20px; font-weight: 600; margin-bottom: 5px;">Request free consultation</h3>
+<p style="font-size: 14px; margin-bottom: 20px; color: #444;">We’ll contact you shortly after receiving your message..</p>
 <form id="contactForm" style="display: flex; flex-direction: column; gap: 15px;">
 <div style="position: relative;">
 <i class="fas fa-user" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--secondary-color);"></i>
@@ -214,7 +214,7 @@
 </form>
 <div id="formSuccess" style="display: none; padding: 40px 20px; text-align: center;">
 <div id="thankYouContent"></div>
-<button class="cta-button" id="popupCalendlyBtn" style="margin-top: 20px;">Agenda tu cita</button>
+<button class="cta-button" id="popupCalendlyBtn" style="margin-top: 20px;">Book Your Appointment</button>
 </div>
 <script>
   const form = document.getElementById('contactForm');
@@ -359,15 +359,15 @@ document.addEventListener('DOMContentLoaded', () => {
           const desc = modal.querySelector('p');
           if (title) title.style.display = 'none';
           if (desc) desc.style.display = 'none';
-          if (thankYouTitle) thankYouTitle.textContent = `¡Gracias, ${name}! Te responderemos en las próximas 24 horas.`;
+          if (thankYouTitle) thankYouTitle.textContent = `¡Thank you, ${name}! You’ll hear from us in the next 24 hours.`;
           if (success) success.style.display = 'block';
           modal.style.display = 'flex';
           form.reset();
         } else {
-          alert('Ocurrió un error. Intenta de nuevo.');
+          alert('An error occurred. Please try again.');
         }
       }).catch(error => {
-        alert('Error al enviar el formulario.');
+        alert('There was an error while sending the form.');
       });
     });
   }
