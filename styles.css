@@ -64,6 +64,10 @@ body {
   margin-left: 40px;
 }
 
+.nav-links li:last-child {
+  margin-left: 20px; /* o 10px si lo quieres más pegado */
+}
+
 .nav-links a {
   text-decoration: none;
   color: var(--primary-color);
