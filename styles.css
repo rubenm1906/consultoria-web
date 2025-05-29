@@ -150,6 +150,13 @@ body {
   color: var(--text-light);
 }
 
+#thankYouTitle {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
 /* Calendly */
 #contact iframe {
   width: 100%;
