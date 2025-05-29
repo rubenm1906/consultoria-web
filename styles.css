@@ -1262,24 +1262,23 @@ footer {
 
 
     /* Botón de idioma */
-    .lang-btn {
-      font-weight: 600;
-      font-size: 13px;
-      background-color: #ffd700;
-      padding: 4px 8px;
-      border-radius: 4px;
-      cursor: pointer;
-      color: #000;
-      transition: all 0.2s ease;
-    }
+.lang-btn {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--primary-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 40px;
+  transition: color 0.2s ease;
+  line-height: 1;
+}
 
-    .lang-btn:hover {
-      background-color: #ffcc00;
-    }
+.lang-btn:hover {
+  color: var(--secondary-color);
+}
 
-    .nav-links li#lang-switch {
-      margin-left: 20px;
-    }
     
 
 /* === Idioma button corrección alineada con diseño === */
