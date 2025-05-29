@@ -1,0 +1,19 @@
+
+/* Botón idioma con estilo de link estándar */
+.lang-btn {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.lang-btn:hover {
+  color: var(--secondary-color);
+}
+
+.nav-links li {
+  margin-left: 40px;
+  list-style: none;
+}
