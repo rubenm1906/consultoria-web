@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Automatiza tu negocio y ahorra tiempo. Agenda una cita gratuita con Talyx.">
+  <title>Optimiza tu Negocio | Talyx</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .landing-container {
+      max-width: 600px;
+    }
+    .landing-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .landing-subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: #555;
+    }
+    .cta-button {
+      background-color: var(--primary-color);
+      color: white;
+      font-weight: 600;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: var(--secondary-color);
+    }
+    .benefits {
+      text-align: left;
+      margin: 30px auto;
+      max-width: 500px;
+      font-size: 15px;
+      color: #444;
+    }
+    .benefits li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="landing-container">
+    <img src="favicon.png" alt="Logo Talyx" style="width: 60px; margin-bottom: 20px;" />
+    <h1 class="landing-title">¿Tu negocio está perdiendo tiempo con tareas manuales?</h1>
+    <p class="landing-subtitle">Te ayudo a automatizar mensajes, formularios, seguimientos y reportes para que trabajes menos y ganes más.</p>
+
+    <ul class="benefits">
+      <li>📅 ¿Sigues anotando las citas en papel o en Excel?</li>
+      <li>📤 ¿Respondes manualmente a cada cliente en WhatsApp o correo?</li>
+      <li>🧾 ¿Tardas horas copiando datos entre sistemas?</li>
+      <li>📊 ¿No sabes cuántos leads recibes ni qué campañas funcionan?</li>
+      <li>⌛ ¿Tú o tu equipo repiten tareas que podrías automatizar?</li>
+    </ul>
+
+    <p><strong>Automatiza lo que consume tu tiempo y enfoca tus esfuerzos en hacer crecer tu negocio.</strong></p>
+
+    <button class="cta-button" onclick="openCalendlyModal()">Agenda tu cita gratuita</button>
+  </div>
+
+  <div id="calendlyModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center;">
+    <div style="position:relative; width:90%; max-width:600px; height:80%; background:white; border-radius:8px; overflow:hidden;">
+      <button id="closeCalendlyModal" style="position:absolute; top:10px; right:15px; background:none; border:none; font-size:20px; cursor:pointer;">✖</button>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/rubenmarin19/consultoria-estragetica" style="min-width:320px; height:100%;"></div>
+    </div>
+  </div>
+
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script>
+    function openCalendlyModal() {
+      document.getElementById('calendlyModal').style.display = 'flex';
+    }
+    document.getElementById('closeCalendlyModal').addEventListener('click', function () {
+      document.getElementById('calendlyModal').style.display = 'none';
+    });
+    document.getElementById('calendlyModal').addEventListener('click', function (e) {
+      if (e.target.id === 'calendlyModal') {
+        document.getElementById('calendlyModal').style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
